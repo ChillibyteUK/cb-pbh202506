@@ -1,0 +1,77 @@
+header {
+    background-color: var(--col-pbh-black);
+
+    &.header-blue {
+        background-color: var(--col-pbh-blue);
+    }
+
+    transition: transform var(--transition);
+
+    &.hidden {
+        transform: translateY(-100%);
+    }
+
+    border-bottom: .375rem solid var(--col-pbh-white);
+
+    a.nav-link {
+        color: var(--col-pbh-white);
+        padding: 0.5rem 1rem !important;
+        text-transform: uppercase;
+        font-style: italic;
+        font-stretch: condensed;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 800;
+        transition: var(--transition);
+        display: inline;
+        @media (min-width:992px) {
+            &:hover {
+                color: var(--col-pbh-pink);
+            }
+        }
+    }
+
+    .logo-container {
+        width: 112px;
+        height: 80px;
+        margin-right: 1rem;
+        position: relative;
+    }
+    .logo {
+        position: absolute;
+        background-image: url(../img/pbh-logo.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: inline-block;
+        aspect-ratio: 1;
+        width: 112px;
+        height: 112px;
+        top: -10px;
+    }
+
+    &.hide {
+        transform: translateY(-140px);
+    }
+
+
+    .current_page_item > .nav-link,
+    .current_page_parent > .nav-link,
+    .dropdown.current-page-ancestor > .nav-link,
+    .dropdown.current-menu-item > .nav-link {
+        position: relative;
+    
+        &::before { // Use ::before instead of ::after
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            display: block;
+            background-color: var(--col-blue-700);
+            bottom: -24px; // Adjust to align properly
+            left: 0px;
+        }
+    }  
+    
+
+}

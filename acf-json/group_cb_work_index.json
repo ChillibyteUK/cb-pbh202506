@@ -1,0 +1,23 @@
+{
+  "key": "group_cb_work_index",
+  "title": "CB Work Index",
+  "fields": [
+    {
+      "key": "field_cb_work_index_title",
+      "label": "CB Work Index",
+      "name": "title",
+      "type": "message"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "acf/cb-work-index"
+      }
+    ]
+  ],
+  "active": 1,
+  "description": ""
+}

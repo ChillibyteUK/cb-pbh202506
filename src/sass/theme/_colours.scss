@@ -1,0 +1,36 @@
+/* Colour Classes */
+.has-white-background-color,
+.bg--white {
+	background-color: var(--col-pbh-white) !important;
+}
+.has-white-color,
+.text-white {
+	color: var(--col-pbh-white) !important;
+}
+
+.has-black-background-color,
+.bg--black {
+	background-color: var(--col-pbh-black) !important;
+}
+.has-black-color,
+.text-black {
+	color: var(--col-pbh-black) !important;
+}
+
+.has-yellow-background-color,
+.bg--yellow {
+	background-color: var(--col-pbh-yellow) !important;
+}
+.has-yellow-color,
+.text-yellow {
+	color: var(--col-pbh-yellow) !important;
+}
+
+.has-pink-background-color,
+.bg--pink {
+	background-color: var(--col-pbh-pink) !important;
+}
+.has-pink-color,
+.text-pink {
+	color: var(--col-pbh-pink) !important;
+}

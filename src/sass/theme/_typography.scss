@@ -1,0 +1,159 @@
+@font-face {
+	font-family: 'Futura';
+	src: url('../fonts/futura-medium.woff2') format('woff2');
+	font-weight: 500;
+	font-style: normal;
+	font-stretch: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Futura';
+	src: url('../fonts/futura-bold.woff2') format('woff2');
+	font-weight: 700;
+	font-style: normal;
+	font-stretch: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Futura';
+	src: url('../fonts/futura-bold-oblique.woff2') format('woff2');
+	font-weight: 700;
+	font-style: oblique;
+	font-stretch: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Futura';
+	src: url('../fonts/futura-extra-bold-condensed.woff2') format('woff2');
+	font-weight: 800;
+	font-style: normal;
+	font-stretch: condensed;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Futura';
+	src: url('../fonts/futura-extra-bold-condensed-oblique.woff2') format('woff2');
+	font-weight: 800;
+	font-style: oblique;
+	font-stretch: condensed;
+	font-display: swap;
+}
+
+
+:root {
+    font-variant-ligatures: none;
+}
+
+html {
+    font-size: 16px;
+}
+
+// ==== Body ====
+body {
+  font-family: 'Futura', sans-serif;
+  font-size: fluid-size(18, 24);
+  font-weight: 500;
+  line-height: 1.75;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// ==== Large Text ====
+.fs-lg {
+  font-size: fluid-size(24, 30);
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.text-lead {
+    font-weight: 800;
+    font-size: 1.5rem;
+    line-height: 1.25rem;
+    font-stretch: condensed;
+    @media (min-width:768px) {
+        font-size: 2.25rem;
+        line-height: 2.5;
+    }
+    @media (min-width:1024px) {
+        font-size: 3rem;
+        line-height: 1;
+    }
+}
+
+.text-headline-md {
+    font-style: italic;
+    font-weight: 800;
+    font-size: 1.875rem;
+    line-height: 2.25;
+    font-stretch: condensed;
+    @media (min-width:768px) {
+        font-size: 2.25rem;
+        line-height: 2.5;
+    }
+    @media (min-width:1024px) {
+        font-size: 3rem;
+        line-height: 1;
+    }
+}
+
+.text-headline-lg {
+    font-style: italic;
+    font-weight: 800;
+    font-size: 2.25rem;
+    line-height: 2.5;
+    font-stretch: condensed;
+    @media (min-width:768px) {
+        font-size: 3.75rem;
+        line-height: 1;
+    }
+    @media (min-width:1024px) {
+        font-size: 4.5rem;
+        line-height: 1;
+    }
+}
+
+.text-headline-xl {
+    font-style: italic;
+    font-weight: 800;
+    font-size: 3rem;
+    line-height: .925;
+    font-stretch: condensed;
+    @media (min-width:768px) {
+        font-size: 4.5rem;
+    }
+    @media (min-width:1024px) {
+        font-size: 6rem;
+    }
+}
+
+
+strong,
+.fw-bold,
+.fw-700 {
+    font-weight: var(--fw-700);
+}
+
+.text-balance {
+    text-wrap: balance;
+}
+
+.w-constrained--sm {
+    max-width: 65ch;
+}
+.w-constrained--lg {
+    max-width: 92ch;
+}
+
+// p:not([class]) {
+//     max-width: 70ch;
+// }
+
+.ff-body {
+    font-family: var(--ff-body);
+}
+
