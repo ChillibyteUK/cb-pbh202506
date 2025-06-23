@@ -1,10 +1,10 @@
 {
-    "key": "group_cb_video_hero",
-    "title": "CB Video Hero",
+    "key": "group_cb_work_list",
+    "title": "CB Work List",
     "fields": [
         {
-            "key": "field_cb_video_hero_title",
-            "label": "CB Video Hero",
+            "key": "field_cb_work_list_title",
+            "label": "CB Work List",
             "name": "",
             "aria-label": "",
             "type": "message",
@@ -21,51 +21,25 @@
             "new_lines": "wpautop"
         },
         {
-            "key": "field_681c6b09f7c0b",
-            "label": "Video URL (MP4)",
-            "name": "video_url",
+            "key": "field_68553be161095",
+            "label": "Title",
+            "name": "title",
             "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "",
                 "class": "",
                 "id": ""
             },
             "default_value": "",
             "maxlength": "",
             "allow_in_bindings": 0,
-            "placeholder": "",
+            "placeholder": "Optional Title",
             "prepend": "",
             "append": ""
-        },
-        {
-            "key": "field_682c918666ab7",
-            "label": "Video Poster (JPG)",
-            "name": "video_poster",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "id",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "allow_in_bindings": 0,
-            "preview_size": "thumbnail"
         }
     ],
     "location": [
@@ -73,7 +47,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/cb-video-hero"
+                "value": "acf\/cb-work-list"
             }
         ]
     ],
@@ -86,5 +60,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1747751629
+    "modified": 1750416367
 }

@@ -1,8 +1,18 @@
 .button {
-    padding: 0.5rem 1.5rem;
-    border-radius: 0;
-    border: none;
-    font-weight: 500;
-    background-color: var(--col-pbh-black);
-    color: var(--col-pbh-white);
+  padding: 0.5rem 1.5rem;
+  border-radius: 0;
+  border: none;
+  font-weight: 500;
+  background-color: var(--col-pbh-dark);
+  color: var(--col-white);
+  text-decoration: none;
+}
+
+.button-green {
+  background-color: var(--col-pbh-green);
+  color: var(--col-pbh-dark);
+  font-weight: var(--fw-700);
+  font-size: 32px;
+  line-height: 1;
+  padding-block: 1rem 0.8rem;
 }

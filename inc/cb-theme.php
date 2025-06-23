@@ -94,40 +94,43 @@ function widgets_init() {
     unregister_sidebar( 'right-sidebar' );
     unregister_sidebar( 'footerfull' );
     unregister_nav_menu( 'primary' );
+}
+add_action( 'widgets_init', 'widgets_init', 11 );
 
+function cb_theme_setup() {
     add_theme_support( 'disable-custom-colors' );
     add_theme_support(
         'editor-color-palette',
         array(
             array(
-                'name'  => 'Black',
-                'slug'  => 'black',
-                'color' => '#000000',
+                'name'  => 'Blackout',
+                'slug'  => 'dark',
+                'color' => '#1E1E1E',
+            ),
+            array(
+                'name'  => 'Light',
+                'slug'  => 'light',
+                'color' => '#F5F5E1',
             ),
             array(
                 'name'  => 'White',
                 'slug'  => 'white',
-                'color' => '#ffffff',
+                'color' => '#FFFFFF',
             ),
             array(
-                'name'  => 'Yellow',
-                'slug'  => 'yellow',
-                'color' => '#f6d14b',
-            ),
-            array(
-                'name'  => 'Pink',
-                'slug'  => 'pink',
-                'color' => '#e6007e',
+                'name'  => 'Violet',
+                'slug'  => 'violet',
+                'color' => '#AA91F0',
             ),
             array(
                 'name'  => 'Green',
                 'slug'  => 'green',
-                'color' => '#b9d536',
+                'color' => '#BEFF2B',
             ),
         )
     );
 }
-add_action( 'widgets_init', 'widgets_init', 11 );
+add_action( 'after_setup_theme', 'cb_theme_setup', 20 );
 
 remove_action( 'wp_enqueue_scripts', 'wp_enqueue_global_styles' );
 remove_action( 'wp_body_open', 'wp_global_styles_render_svg_filters' );
@@ -241,9 +244,9 @@ add_filter( 'gform_submit_button', 'wd_gf_update_submit_button', 10, 2 );
  */
 function cb_theme_enqueue() {
     $the_theme = wp_get_theme();
+    wp_enqueue_style( 'aos-style', 'https://unpkg.com/aos@2.3.1/dist/aos.css', array() );
+    wp_enqueue_script( 'aos', 'https://unpkg.com/aos@2.3.1/dist/aos.js', array(), null, true );
 	// phpcs:disable
-    // wp_enqueue_style('aos-style', "https://unpkg.com/aos@2.3.1/dist/aos.css", array());
-    // wp_enqueue_script('aos', 'https://unpkg.com/aos@2.3.1/dist/aos.js', array(), null, true);
     // wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.6.3.min.js', array(), null, true);
     // wp_enqueue_style( 'lightbox-stylesheet', 'https://cdn.jsdelivr.net/npm/lightbox2@2.11.5/dist/css/lightbox.min.css', array(), null );
     // wp_enqueue_script( 'lightbox-scripts', 'https://cdn.jsdelivr.net/npm/lightbox2@2.11.5/dist/js/lightbox.min.js', array(), null, true );
@@ -314,20 +317,26 @@ function cb_load_more_work() {
 
 	if ( $query->have_posts() ) {
 		ob_start();
+        $d = 0;
 		while ( $query->have_posts() ) {
 			$query->the_post();
 			$logo = get_field( 'logo', get_the_ID() );
 			?>
-			<div class="work-item col-12 col-md-6 col-lg-4">
+			<div class="work-item col-12 col-md-6 col-lg-4" data-aos="fade" data-aos-delay="<?= esc_attr( $d ); ?>">
 				<a href="<?= esc_url( get_permalink() ); ?>" class="work-item__link">
-					<?= get_the_post_thumbnail( get_the_ID(), 'full', array( 'class' => 'work-item__image' ) ); ?>
-					<div class="work-item__overlay">
+					<div class="work-item__image-container">
+						<?= get_the_post_thumbnail( get_the_ID(), 'full', array( 'class' => 'work-item__image' ) ); ?>
+						<div class="work-item__overlay">
+							<h3 class="work-item__title"><?= esc_html( get_the_title() ); ?></h3>
+						</div>
+					</div>
+					<div class="work-item__logo-container">
 						<?= wp_get_attachment_image( $logo, 'full', false, array( 'class' => 'work-item__logo' ) ); ?>
-						<h2 class="work-item__title"><?= esc_html( get_the_title() ); ?></h2>
 					</div>
 				</a>
 			</div>
 			<?php
+            $d += 50;
 		}
 		wp_reset_postdata();
 		$response['html'] = ob_get_clean();

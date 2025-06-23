@@ -7,36 +7,32 @@
  */
 
 // Exit if accessed directly.
-defined('ABSPATH') || exit;
+defined( 'ABSPATH' ) || exit;
 
-define('CB_THEME_DIR', WP_CONTENT_DIR . '/themes/cb-pbh2025');
+define( 'CB_THEME_DIR', WP_CONTENT_DIR . '/themes/cb-pbh202506' );
 
 require_once CB_THEME_DIR . '/inc/cb-theme.php';
 
 /**
  * Removes the parent themes stylesheet and scripts from inc/enqueue.php
  */
-function understrap_remove_scripts()
-{
-	wp_dequeue_style('understrap-styles');
-	wp_deregister_style('understrap-styles');
+function understrap_remove_scripts() {
+	wp_dequeue_style( 'understrap-styles' );
+	wp_deregister_style( 'understrap-styles' );
 
-	wp_dequeue_script('understrap-scripts');
-	wp_deregister_script('understrap-scripts');
+	wp_dequeue_script( 'understrap-scripts' );
+	wp_deregister_script( 'understrap-scripts' );
 }
-add_action('wp_enqueue_scripts', 'understrap_remove_scripts', 20);
-
-
+add_action( 'wp_enqueue_scripts', 'understrap_remove_scripts', 20 );
 
 /**
  * Enqueue our stylesheet and javascript file
  */
-function theme_enqueue_styles()
-{
+function theme_enqueue_styles() {
 
 	// Get the theme data.
 	$the_theme     = wp_get_theme();
-	$theme_version = $the_theme->get('Version');
+	$theme_version = $the_theme->get( 'Version' );
 
 	$suffix = defined('SCRIPT_DEBUG') && SCRIPT_DEBUG ? '' : '.min';
 	// Grab asset urls.

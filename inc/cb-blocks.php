@@ -19,11 +19,11 @@ function acf_blocks() {
 
         acf_register_block_type(
             array(
-                'name'            => 'cb_services_index',
-                'title'           => __( 'CB Services Index' ),
+                'name'            => 'cb_contact_cta',
+                'title'           => __( 'CB Contact CTA' ),
                 'category'        => 'layout',
                 'icon'            => 'cover-image',
-                'render_template' => 'page-templates/blocks/cb-services-index.php',
+                'render_template' => 'page-templates/blocks/cb-contact-cta.php',
                 'mode'            => 'edit',
                 'supports'        => array(
                     'mode'      => false,
@@ -36,11 +36,11 @@ function acf_blocks() {
 
         acf_register_block_type(
             array(
-                'name'            => 'cb_work_index',
-                'title'           => __( 'CB Work Index' ),
+                'name'            => 'cb_services',
+                'title'           => __( 'CB Services' ),
                 'category'        => 'layout',
                 'icon'            => 'cover-image',
-                'render_template' => 'page-templates/blocks/cb-work-index.php',
+                'render_template' => 'page-templates/blocks/cb-services.php',
                 'mode'            => 'edit',
                 'supports'        => array(
                     'mode'      => false,
@@ -53,11 +53,11 @@ function acf_blocks() {
 
         acf_register_block_type(
             array(
-                'name'            => 'cb_video_hero',
-                'title'           => __( 'CB Video Hero' ),
+                'name'            => 'cb_homepage_hero',
+                'title'           => __( 'CB Homepage Hero' ),
                 'category'        => 'layout',
                 'icon'            => 'cover-image',
-                'render_template' => 'page-templates/blocks/cb-video-hero.php',
+                'render_template' => 'page-templates/blocks/cb-homepage-hero.php',
                 'mode'            => 'edit',
                 'supports'        => array(
                     'mode'      => false,
@@ -70,11 +70,11 @@ function acf_blocks() {
 
         acf_register_block_type(
             array(
-                'name'            => 'cb_contact',
-                'title'           => __( 'CB Contact' ),
+                'name'            => 'cb_work_list',
+                'title'           => __( 'CB Work List' ),
                 'category'        => 'layout',
                 'icon'            => 'cover-image',
-                'render_template' => 'page-templates/blocks/cb-contact.php',
+                'render_template' => 'page-templates/blocks/cb-work-list.php',
                 'mode'            => 'edit',
                 'supports'        => array(
                     'mode'      => false,
@@ -84,7 +84,6 @@ function acf_blocks() {
                 ),
             )
         );
-        
 
     }
 }

@@ -23,19 +23,13 @@ if ( session_status() === PHP_SESSION_NONE ) {
         charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1">
     <link rel="preload"
-        href="<?= esc_url( get_stylesheet_directory_uri() . '/fonts/futura-medium.woff2' ); ?>"
+        href="<?= esc_url( get_stylesheet_directory_uri() . '/fonts/Futura-PT-Cond-Extra-Bold-Oblique.woff2' ); ?>"
         as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload"
-        href="<?= esc_url( get_stylesheet_directory_uri() . '/fonts/futura-bold.woff2' ); ?>"
+        href="<?= esc_url( get_stylesheet_directory_uri() . '/fonts/PPPangramSans-Bold.woff2' ); ?>"
         as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload"
-        href="<?= esc_url( get_stylesheet_directory_uri() . '/fonts/futura-bold-oblique.woff2' ); ?>"
-        as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload"
-        href="<?= esc_url( get_stylesheet_directory_uri() . '/fonts/futura-extra-bold-condensed.woff2' ); ?>"
-        as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload"
-        href="<?= esc_url( get_stylesheet_directory_uri() . '/fonts/futura-extra-bold-condensed-oblique.woff2' ); ?>"
+        href="<?= esc_url( get_stylesheet_directory_uri() . '/fonts/PPPangramSans-Medium.woff2' ); ?>"
         as="font" type="font/woff2" crossorigin="anonymous">
     <?php
     if ( ! is_user_logged_in() ) {

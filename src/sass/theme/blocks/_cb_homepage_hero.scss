@@ -1,0 +1,83 @@
+.cb-homepage-hero {
+  position: relative;
+  width: 100vw;
+  min-height: 200vh; // Ensures sticky works and content scrolls over hero
+  z-index: 1;
+  overflow: visible;
+
+  &__image-wrapper {
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+    display: block;
+  }
+
+  &__image {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    display: block;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.6s;
+    pointer-events: none;
+    display: flex;
+    align-items: stretch;
+    .zigzag {
+      width: 100%;
+      height: 100vh;
+      background: url("../img/zigzag.svg") top center/cover no-repeat;
+      flex: 1 0 auto;
+    }
+  }
+
+  &.scrolled .cb-homepage-hero__overlay {
+    opacity: 0.9;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    margin: 0 auto;
+    margin-top: -50vh;
+    padding-top: 20vh;
+    padding-bottom: 10vh;
+    color: var(--col-pbh-violet);
+    opacity: 0;
+    transform: translateY(40px);
+    transition:
+      opacity 0.6s,
+      transform 0.6s;
+    pointer-events: none;
+
+    .container p {
+      max-width: 50ch;
+      padding-block-end: 0.5rem;
+    }
+  }
+
+  &__logo {
+    width: min(700px, 40vw);
+    margin-bottom: 3rem;
+  }
+
+  &.show-content .cb-homepage-hero__content {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+}

@@ -1,0 +1,138 @@
+.service_intro_panel {
+  height: 100vh;
+  min-height: 100vh;
+  background-color: var(--col-pbh-green);
+  color: var(--col-pbh-dark);
+
+  h1 {
+    font-size: 105px;
+    font-family: var(--ff-title);
+    font-weight: var(--fw-800);
+    color: var(--col-pbh-dark);
+    text-transform: uppercase;
+    letter-spacing: -0.025em;
+    margin-bottom: 1rem;
+  }
+  .service_intro {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+
+  &:has(.service_link:hover) .service_link:not(:hover) {
+    opacity: 0.5;
+    filter: blur(2px);
+  }
+}
+
+.service_link {
+  display: grid;
+
+  grid-template-columns: 50px auto;
+  column-gap: 0.5rem;
+
+  color: var(--col-pbh-dark);
+  text-decoration: none;
+
+  transition: filter var(--transition);
+
+  .service_card {
+    padding: 0;
+    transition: padding var(--transition);
+    position: relative;
+    isolation: isolate;
+    .service_background {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='Layer_2' data-name='Layer 2' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 584.37 328.71'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23dfff93; %7D .cls-2 %7B fill: %23beff28; %7D %3C/style%3E%3C/defs%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Cg%3E%3Crect class='cls-1' y='0' width='584.37' height='328.71'/%3E%3Cpolygon class='cls-2' points='.44 56.37 18.68 56.32 25.63 0 .44 56.37'/%3E%3Cpolygon class='cls-2' points='18.7 56.35 11.75 112.67 36.94 56.29 18.7 56.35'/%3E%3Cpolygon class='cls-2' points='36.94 56.37 55.17 56.32 62.13 0 36.94 56.37'/%3E%3Cpolygon class='cls-2' points='55.2 56.35 48.24 112.67 73.43 56.29 55.2 56.35'/%3E%3Cpolygon class='cls-2' points='73.43 56.37 91.67 56.32 98.62 0 73.43 56.37'/%3E%3Cpolygon class='cls-2' points='91.7 56.35 84.74 112.67 109.93 56.29 91.7 56.35'/%3E%3Cpolygon class='cls-2' points='109.93 56.37 128.16 56.32 135.12 0 109.93 56.37'/%3E%3Cpolygon class='cls-2' points='128.19 56.35 121.24 112.67 146.43 56.29 128.19 56.35'/%3E%3Cpolygon class='cls-2' points='146.42 56.37 164.66 56.32 171.61 0 146.42 56.37'/%3E%3Cpolygon class='cls-2' points='164.69 56.35 157.73 112.67 182.92 56.29 164.69 56.35'/%3E%3Cpolygon class='cls-2' points='182.92 56.37 201.15 56.32 208.11 0 182.92 56.37'/%3E%3Cpolygon class='cls-2' points='201.18 56.35 194.23 112.67 219.42 56.29 201.18 56.35'/%3E%3Cpolygon class='cls-2' points='219.42 56.37 237.65 56.32 244.6 0 219.42 56.37'/%3E%3Cpolygon class='cls-2' points='237.68 56.35 230.72 112.67 255.91 56.29 237.68 56.35'/%3E%3Cpolygon class='cls-2' points='255.91 56.37 274.14 56.32 281.1 0 255.91 56.37'/%3E%3Cpolygon class='cls-2' points='274.17 56.35 267.22 112.67 292.41 56.29 274.17 56.35'/%3E%3Cpolygon class='cls-2' points='292.41 56.37 310.64 56.32 317.59 0 292.41 56.37'/%3E%3Cpolygon class='cls-2' points='310.67 56.35 303.71 112.67 328.9 56.29 310.67 56.35'/%3E%3Cpolygon class='cls-2' points='328.9 56.37 347.14 56.32 354.09 0 328.9 56.37'/%3E%3Cpolygon class='cls-2' points='347.16 56.35 340.21 112.67 365.4 56.29 347.16 56.35'/%3E%3Cpolygon class='cls-2' points='365.4 56.37 383.63 56.32 390.59 0 365.4 56.37'/%3E%3Cpolygon class='cls-2' points='383.66 56.35 376.7 112.67 401.89 56.29 383.66 56.35'/%3E%3Cpolygon class='cls-2' points='401.89 56.37 420.13 56.32 427.08 0 401.89 56.37'/%3E%3Cpolygon class='cls-2' points='420.16 56.35 413.2 112.67 438.39 56.29 420.16 56.35'/%3E%3Cpolygon class='cls-2' points='438.39 56.37 456.62 56.32 463.58 0 438.39 56.37'/%3E%3Cpolygon class='cls-2' points='456.65 56.35 449.7 112.67 474.88 56.29 456.65 56.35'/%3E%3Cpolygon class='cls-2' points='474.88 56.37 493.12 56.32 500.07 0 474.88 56.37'/%3E%3Cpolygon class='cls-2' points='493.15 56.35 486.19 112.67 511.38 56.29 493.15 56.35'/%3E%3Cpolygon class='cls-2' points='511.38 56.37 529.61 56.32 536.57 0 511.38 56.37'/%3E%3Cpolygon class='cls-2' points='529.64 56.35 522.69 112.67 547.88 56.29 529.64 56.35'/%3E%3Cpolygon class='cls-2' points='547.88 56.37 566.11 56.32 573.06 0 547.88 56.37'/%3E%3Cpolygon class='cls-2' points='566.14 56.35 559.18 112.67 584.37 56.29 566.14 56.35'/%3E%3Cpolygon class='cls-2' points='.44 169.04 18.68 168.99 25.63 112.67 .44 169.04'/%3E%3Cpolygon class='cls-2' points='18.7 169.01 11.75 225.34 36.94 168.96 18.7 169.01'/%3E%3Cpolygon class='cls-2' points='62.13 112.67 36.94 169.04 55.17 168.99 62.13 112.67'/%3E%3Cpolygon class='cls-2' points='55.2 169.01 48.24 225.34 73.43 168.96 55.2 169.01'/%3E%3Cpolygon class='cls-2' points='98.62 112.67 73.43 169.04 91.67 168.99 98.62 112.67'/%3E%3Cpolygon class='cls-2' points='91.7 169.01 84.74 225.34 109.93 168.96 91.7 169.01'/%3E%3Cpolygon class='cls-2' points='135.12 112.67 109.93 169.04 128.16 168.99 135.12 112.67'/%3E%3Cpolygon class='cls-2' points='128.19 169.01 121.24 225.34 146.43 168.96 128.19 169.01'/%3E%3Cpolygon class='cls-2' points='171.61 112.67 146.42 169.04 164.66 168.99 171.61 112.67'/%3E%3Cpolygon class='cls-2' points='164.69 169.01 157.73 225.34 182.92 168.96 164.69 169.01'/%3E%3Cpolygon class='cls-2' points='208.11 112.67 182.92 169.04 201.15 168.99 208.11 112.67'/%3E%3Cpolygon class='cls-2' points='201.18 169.01 194.23 225.34 219.42 168.96 201.18 169.01'/%3E%3Cpolygon class='cls-2' points='244.6 112.67 219.42 169.04 237.65 168.99 244.6 112.67'/%3E%3Cpolygon class='cls-2' points='237.68 169.01 230.72 225.34 255.91 168.96 237.68 169.01'/%3E%3Cpolygon class='cls-2' points='281.1 112.67 255.91 169.04 274.14 168.99 281.1 112.67'/%3E%3Cpolygon class='cls-2' points='274.17 169.01 267.22 225.34 292.41 168.96 274.17 169.01'/%3E%3Cpolygon class='cls-2' points='317.6 112.67 292.41 169.04 310.64 168.99 317.6 112.67'/%3E%3Cpolygon class='cls-2' points='310.67 169.01 303.71 225.34 328.9 168.96 310.67 169.01'/%3E%3Cpolygon class='cls-2' points='354.09 112.67 328.9 169.04 347.14 168.99 354.09 112.67'/%3E%3Cpolygon class='cls-2' points='347.16 169.01 340.21 225.34 365.4 168.96 347.16 169.01'/%3E%3Cpolygon class='cls-2' points='390.59 112.67 365.4 169.04 383.63 168.99 390.59 112.67'/%3E%3Cpolygon class='cls-2' points='383.66 169.01 376.7 225.34 401.89 168.96 383.66 169.01'/%3E%3Cpolygon class='cls-2' points='427.08 112.67 401.89 169.04 420.13 168.99 427.08 112.67'/%3E%3Cpolygon class='cls-2' points='420.16 169.01 413.2 225.34 438.39 168.96 420.16 169.01'/%3E%3Cpolygon class='cls-2' points='463.58 112.67 438.39 169.04 456.62 168.99 463.58 112.67'/%3E%3Cpolygon class='cls-2' points='456.65 169.01 449.7 225.34 474.88 168.96 456.65 169.01'/%3E%3Cpolygon class='cls-2' points='500.07 112.67 474.88 169.04 493.12 168.99 500.07 112.67'/%3E%3Cpolygon class='cls-2' points='493.15 169.01 486.19 225.34 511.38 168.96 493.15 169.01'/%3E%3Cpolygon class='cls-2' points='536.57 112.67 511.38 169.04 529.61 168.99 536.57 112.67'/%3E%3Cpolygon class='cls-2' points='529.64 169.01 522.69 225.34 547.88 168.96 529.64 169.01'/%3E%3Cpolygon class='cls-2' points='573.06 112.67 547.88 169.04 566.11 168.99 573.06 112.67'/%3E%3Cpolygon class='cls-2' points='566.14 169.01 559.18 225.34 584.37 168.96 566.14 169.01'/%3E%3Cpolygon class='cls-2' points='.44 281.71 18.68 281.66 25.63 225.34 .44 281.71'/%3E%3Cpolygon class='cls-2' points='18.7 281.68 12.9 328.71 15.9 328.71 36.94 281.63 18.7 281.68'/%3E%3Cpolygon class='cls-2' points='62.13 225.34 36.94 281.71 55.17 281.66 62.13 225.34'/%3E%3Cpolygon class='cls-2' points='55.2 281.68 49.39 328.71 52.4 328.71 73.43 281.63 55.2 281.68'/%3E%3Cpolygon class='cls-2' points='98.62 225.34 73.43 281.71 91.67 281.66 98.62 225.34'/%3E%3Cpolygon class='cls-2' points='91.7 281.68 85.89 328.71 88.89 328.71 109.93 281.63 91.7 281.68'/%3E%3Cpolygon class='cls-2' points='135.12 225.34 109.93 281.71 128.16 281.66 135.12 225.34'/%3E%3Cpolygon class='cls-2' points='128.19 281.68 122.38 328.71 125.39 328.71 146.42 281.63 128.19 281.68'/%3E%3Cpolygon class='cls-2' points='171.61 225.34 146.42 281.71 164.66 281.66 171.61 225.34'/%3E%3Cpolygon class='cls-2' points='164.69 281.68 158.88 328.71 161.88 328.71 182.92 281.63 164.69 281.68'/%3E%3Cpolygon class='cls-2' points='208.11 225.34 182.92 281.71 201.15 281.66 208.11 225.34'/%3E%3Cpolygon class='cls-2' points='201.18 281.68 195.37 328.71 198.38 328.71 219.42 281.63 201.18 281.68'/%3E%3Cpolygon class='cls-2' points='244.6 225.34 219.42 281.71 237.65 281.66 244.6 225.34'/%3E%3Cpolygon class='cls-2' points='237.68 281.68 231.87 328.71 234.88 328.71 255.91 281.63 237.68 281.68'/%3E%3Cpolygon class='cls-2' points='281.1 225.34 255.91 281.71 274.14 281.66 281.1 225.34'/%3E%3Cpolygon class='cls-2' points='274.17 281.68 268.36 328.71 271.37 328.71 292.41 281.63 274.17 281.68'/%3E%3Cpolygon class='cls-2' points='317.6 225.34 292.41 281.71 310.64 281.66 317.6 225.34'/%3E%3Cpolygon class='cls-2' points='310.67 281.68 304.86 328.71 307.87 328.71 328.9 281.63 310.67 281.68'/%3E%3Cpolygon class='cls-2' points='354.09 225.34 328.9 281.71 347.14 281.66 354.09 225.34'/%3E%3Cpolygon class='cls-2' points='347.16 281.68 341.36 328.71 344.36 328.71 365.4 281.63 347.16 281.68'/%3E%3Cpolygon class='cls-2' points='390.59 225.34 365.4 281.71 383.63 281.66 390.59 225.34'/%3E%3Cpolygon class='cls-2' points='383.66 281.68 377.85 328.71 380.86 328.71 401.89 281.63 383.66 281.68'/%3E%3Cpolygon class='cls-2' points='427.08 225.34 401.89 281.71 420.13 281.66 427.08 225.34'/%3E%3Cpolygon class='cls-2' points='420.16 281.68 414.35 328.71 417.35 328.71 438.39 281.63 420.16 281.68'/%3E%3Cpolygon class='cls-2' points='463.58 225.34 438.39 281.71 456.62 281.66 463.58 225.34'/%3E%3Cpolygon class='cls-2' points='456.65 281.68 450.84 328.71 453.85 328.71 474.88 281.63 456.65 281.68'/%3E%3Cpolygon class='cls-2' points='500.07 225.34 474.88 281.71 493.12 281.66 500.07 225.34'/%3E%3Cpolygon class='cls-2' points='493.15 281.68 487.34 328.71 490.35 328.71 511.38 281.63 493.15 281.68'/%3E%3Cpolygon class='cls-2' points='536.57 225.34 511.38 281.71 529.61 281.66 536.57 225.34'/%3E%3Cpolygon class='cls-2' points='529.64 281.68 523.83 328.71 526.84 328.71 547.88 281.63 529.64 281.68'/%3E%3Cpolygon class='cls-2' points='573.06 225.34 547.88 281.71 566.11 281.66 573.06 225.34'/%3E%3Cpolygon class='cls-2' points='566.14 281.68 560.33 328.71 563.34 328.71 584.37 281.63 566.14 281.68'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      transition: opacity var(--transition);
+      z-index: -1;
+    }
+  }
+
+  .h2 {
+    font-size: 32px;
+    font-family: var(--ff-heading);
+    font-weight: var(--fw-700);
+    transition: font-size var(--transition);
+  }
+
+  .service_intro {
+    opacity: 0;
+    font-size: 18px;
+    transition: opacity var(--transition);
+  }
+
+  .service_icon {
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='Layer_2' data-name='Layer 2' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60.8 187.72'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %231e1e1e; %7D %3C/style%3E%3C/defs%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Cg%3E%3Cpolygon class='cls-1' points='41.97 0 0 93.93 30.38 93.84 41.97 0'/%3E%3Cpolygon class='cls-1' points='30.43 93.88 18.84 187.72 60.8 93.79 30.43 93.88'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 30px auto;
+    transition: background-size var(--transition);
+  }
+
+  &:hover {
+    color: var(--col-pbh-dark);
+    h2 {
+      font-size: 38px;
+    }
+    .service_intro {
+      opacity: 1;
+    }
+    .service_icon {
+      background-size: 50px auto;
+    }
+    .service_card {
+      padding: 2rem;
+      .service_background {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.service_panel {
+  min-height: 100vh;
+  height: 100vh;
+  background-size: cover;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  color: var(--col-pbh-white);
+  font-size: 18px;
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0 0 0 / 0.6);
+    z-index: -1;
+  }
+  h2 {
+    font-family: var(--ff-title);
+    font-weight: var(--fw-800);
+    font-size: 105px;
+    text-transform: uppercase;
+    line-height: 0.8;
+    margin-bottom: 1rem;
+  }
+
+  .service_detail {
+    display: grid;
+    grid-template-columns: 30px auto;
+    column-gap: 1rem;
+    .service_icon {
+      background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='Layer_2' data-name='Layer 2' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60.8 187.72'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23f5f5e1; %7D %3C/style%3E%3C/defs%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Cg%3E%3Cpolygon class='cls-1' points='41.97 0 0 93.93 30.38 93.84 41.97 0'/%3E%3Cpolygon class='cls-1' points='30.43 93.88 18.84 187.72 60.8 93.79 30.43 93.88'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-size: 30px auto;
+      margin-top: -32px;
+    }
+    h3 {
+      font-size: 36px;
+      display: inline-block;
+      background-color: var(--col-pbh-white);
+      color: var(--col-pbh-dark);
+      font-weight: var(--fw-700);
+    }
+  }
+  .service_detail:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}

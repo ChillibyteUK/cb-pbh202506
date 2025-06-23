@@ -1,36 +1,41 @@
 /* Colour Classes */
 .has-white-background-color,
 .bg--white {
-	background-color: var(--col-pbh-white) !important;
+  background-color: var(--col-white) !important;
 }
 .has-white-color,
 .text-white {
-	color: var(--col-pbh-white) !important;
+  color: var(--col-white) !important;
 }
 
-.has-black-background-color,
-.bg--black {
-	background-color: var(--col-pbh-black) !important;
+.has-dark-background-color,
+.bg--dark {
+  background-color: var(--col-pbh-dark) !important;
 }
-.has-black-color,
-.text-black {
-	color: var(--col-pbh-black) !important;
-}
-
-.has-yellow-background-color,
-.bg--yellow {
-	background-color: var(--col-pbh-yellow) !important;
-}
-.has-yellow-color,
-.text-yellow {
-	color: var(--col-pbh-yellow) !important;
+.has-dark-color,
+.text-dark {
+  color: var(--col-pbh-dark) !important;
 }
 
-.has-pink-background-color,
-.bg--pink {
-	background-color: var(--col-pbh-pink) !important;
+.has-green-background-color,
+.bg--green {
+  background-color: var(--col-pbh-green) !important;
 }
-.has-pink-color,
-.text-pink {
-	color: var(--col-pbh-pink) !important;
+.has-green-color,
+.text-green {
+  color: var(--col-pbh-green) !important;
+}
+
+.has-violet-background-color,
+.bg--violet {
+  background-color: var(--col-pbh-violet) !important;
+}
+.has-violet-color,
+.text-violet {
+  color: var(--col-pbh-violet) !important;
+}
+
+.has-violet-lightning-background {
+  background-image: url("data:image/svg+xml,%3Csvg id='Layer_2' data-name='Layer 2' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 122 370'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23ab90ee; %7D .cls-2 %7B fill: %23b59df0; %7D %3C/style%3E%3C/defs%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Cg%3E%3Crect class='cls-2' width='122' height='370'/%3E%3Cpolygon class='cls-1' points='81.33 0 0 185 61 185 81.33 0'/%3E%3Cpolygon class='cls-1' points='40.67 370 61 185 122 185 40.67 370'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-size: 61px 185px; // half size
 }

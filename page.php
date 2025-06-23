@@ -13,6 +13,7 @@ get_header();
 ?>
 <main id="main" class="<?= esc_attr( $classes ); ?>">
     <?php
+	/*
 	if ( ! is_front_page() ) {
 		?>
 		<div class="container pt-5">
@@ -25,12 +26,14 @@ get_header();
 		<h1><?= esc_html( get_the_title() ); ?></h1>
 		<?php
 	}
+	*/
     the_post();
     the_content();
 	// phpcs:disable
     // $block_names = get_all_block_names_from_content(get_the_ID());
     // print_r($block_names);
 	// phpcs:enable
+	/*
 	if ( ! is_front_page() ) {
 		?>
 		<div class="text-center py-5 back">
@@ -40,6 +43,7 @@ get_header();
 		<?php
 		get_template_part( './page-templates/blocks/cb-contact' );
 	}
+	*/
     ?>
 </main>
 <?php

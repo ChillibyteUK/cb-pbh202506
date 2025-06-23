@@ -1,63 +1,42 @@
 @font-face {
-	font-family: 'Futura';
-	src: url('../fonts/futura-medium.woff2') format('woff2');
-	font-weight: 500;
-	font-style: normal;
-	font-stretch: normal;
-	font-display: swap;
+  font-family: "Futura PT Condensed";
+  src: url("../fonts/Futura-PT-Cond-Extra-Bold-Oblique.woff2") format("woff2");
+  font-weight: 800;
+  font-style: oblique;
+  font-stretch: condensed;
+  font-display: swap;
 }
 
 @font-face {
-	font-family: 'Futura';
-	src: url('../fonts/futura-bold.woff2') format('woff2');
-	font-weight: 700;
-	font-style: normal;
-	font-stretch: normal;
-	font-display: swap;
+  font-family: "PPPangram Sans";
+  src: url("../fonts/PPPangramSans-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-	font-family: 'Futura';
-	src: url('../fonts/futura-bold-oblique.woff2') format('woff2');
-	font-weight: 700;
-	font-style: oblique;
-	font-stretch: normal;
-	font-display: swap;
+  font-family: "PPPangram Sans";
+  src: url("../fonts/PPPangramSans-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
-
-@font-face {
-	font-family: 'Futura';
-	src: url('../fonts/futura-extra-bold-condensed.woff2') format('woff2');
-	font-weight: 800;
-	font-style: normal;
-	font-stretch: condensed;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'Futura';
-	src: url('../fonts/futura-extra-bold-condensed-oblique.woff2') format('woff2');
-	font-weight: 800;
-	font-style: oblique;
-	font-stretch: condensed;
-	font-display: swap;
-}
-
 
 :root {
-    font-variant-ligatures: none;
+  font-variant-ligatures: none;
 }
 
 html {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 // ==== Body ====
 body {
-  font-family: 'Futura', sans-serif;
+  font-family: var(--ff-body);
   font-size: fluid-size(18, 24);
   font-weight: 500;
-  line-height: 1.75;
+  line-height: 1.5;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -71,82 +50,81 @@ body {
 }
 
 .text-lead {
-    font-weight: 800;
-    font-size: 1.5rem;
-    line-height: 1.25rem;
-    font-stretch: condensed;
-    @media (min-width:768px) {
-        font-size: 2.25rem;
-        line-height: 2.5;
-    }
-    @media (min-width:1024px) {
-        font-size: 3rem;
-        line-height: 1;
-    }
+  font-weight: 800;
+  font-size: 1.5rem;
+  line-height: 1.25rem;
+  font-stretch: condensed;
+  @media (min-width: 768px) {
+    font-size: 2.25rem;
+    line-height: 2.5;
+  }
+  @media (min-width: 1024px) {
+    font-size: 3rem;
+    line-height: 1;
+  }
 }
 
 .text-headline-md {
-    font-style: italic;
-    font-weight: 800;
-    font-size: 1.875rem;
-    line-height: 2.25;
-    font-stretch: condensed;
-    @media (min-width:768px) {
-        font-size: 2.25rem;
-        line-height: 2.5;
-    }
-    @media (min-width:1024px) {
-        font-size: 3rem;
-        line-height: 1;
-    }
+  font-style: italic;
+  font-weight: 800;
+  font-size: 1.875rem;
+  line-height: 2.25;
+  font-stretch: condensed;
+  @media (min-width: 768px) {
+    font-size: 2.25rem;
+    line-height: 2.5;
+  }
+  @media (min-width: 1024px) {
+    font-size: 3rem;
+    line-height: 1;
+  }
 }
 
 .text-headline-lg {
-    font-style: italic;
-    font-weight: 800;
-    font-size: 2.25rem;
-    line-height: 2.5;
-    font-stretch: condensed;
-    @media (min-width:768px) {
-        font-size: 3.75rem;
-        line-height: 1;
-    }
-    @media (min-width:1024px) {
-        font-size: 4.5rem;
-        line-height: 1;
-    }
+  font-style: italic;
+  font-weight: 800;
+  font-size: 2.25rem;
+  line-height: 2.5;
+  font-stretch: condensed;
+  @media (min-width: 768px) {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+  @media (min-width: 1024px) {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
 }
 
 .text-headline-xl {
-    font-style: italic;
-    font-weight: 800;
-    font-size: 3rem;
-    line-height: .925;
-    font-stretch: condensed;
-    @media (min-width:768px) {
-        font-size: 4.5rem;
-    }
-    @media (min-width:1024px) {
-        font-size: 6rem;
-    }
+  font-style: italic;
+  font-weight: 800;
+  font-size: 3rem;
+  line-height: 0.925;
+  font-stretch: condensed;
+  @media (min-width: 768px) {
+    font-size: 4.5rem;
+  }
+  @media (min-width: 1024px) {
+    font-size: 6rem;
+  }
 }
-
 
 strong,
 .fw-bold,
-.fw-700 {
-    font-weight: var(--fw-700);
+.fw-800 {
+  font-weight: var(--fw-800);
 }
 
 .text-balance {
-    text-wrap: balance;
+  text-wrap: balance;
 }
 
 .w-constrained--sm {
-    max-width: 65ch;
+  max-width: 65ch;
 }
 .w-constrained--lg {
-    max-width: 92ch;
+  max-width: 92ch;
 }
 
 // p:not([class]) {
@@ -154,6 +132,13 @@ strong,
 // }
 
 .ff-body {
-    font-family: var(--ff-body);
+  font-family: var(--ff-body);
 }
 
+.ff-heading {
+  font-family: var(--ff-heading);
+}
+
+.ff-title {
+  font-family: var(--ff-title);
+}
