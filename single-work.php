@@ -37,7 +37,7 @@ get_header();
 		$video  = get_field( 'video' );
 		$poster = $video['poster'];
 		?>
-		<div class="container video-lightbox-wrapper position-relative">
+		<div class="container video-lightbox-wrapper position-relative mt-5">
 			<picture>
 				<source srcset="<?= esc_attr( wp_get_attachment_image_srcset( $poster, 'full' ) ); ?>" type="image/jpeg">
 				<img 
