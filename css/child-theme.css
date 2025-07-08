@@ -22137,6 +22137,58 @@ header .dropdown.current-menu-item > .nav-link::before {
     transform: translateX(-50%);
   }
 }
+.cb-contact {
+  background-color: var(--col-pbh-white);
+  color: var(--col-pbh-dark);
+  padding-block: 4rem;
+}
+.cb-contact__title {
+  font-family: var(--ff-title);
+  font-size: 6rem;
+  text-transform: uppercase;
+}
+@media (max-width: 1200px) {
+  .cb-contact__title {
+    font-size: 5rem;
+  }
+}
+@media (max-width: 768px) {
+  .cb-contact__title {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 480px) {
+  .cb-contact__title {
+    font-size: 3rem;
+  }
+}
+.cb-contact__content {
+  font-size: var(--fs-400);
+}
+.cb-contact__item {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 4rem;
+  color: var(--col-pbh-light);
+}
+.cb-contact__item a {
+  text-decoration: none;
+  color: var(--col-pbh-dark);
+  font-size: var(--fs-550);
+}
+.cb-contact__item .icon {
+  display: grid;
+  place-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.8rem;
+  line-height: 1;
+  border-radius: 0.75rem;
+  background-color: var(--col-pbh-dark);
+  color: var(--col-pbh-white) !important;
+}
+
 .single-work__hero-section {
   display: flex;
   height: 600px;

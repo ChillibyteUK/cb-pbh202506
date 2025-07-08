@@ -1,0 +1,49 @@
+.cb-contact {
+    background-color: var(--col-pbh-white);
+    color: var(--col-pbh-dark);
+    padding-block: 4rem;
+
+    &__title {
+        font-family: var(--ff-title);
+        font-size: 6rem;
+        text-transform: uppercase;
+        @media (max-width: 1200px) {
+            font-size: 5rem;
+        }
+        
+        @media (max-width: 768px) {
+            font-size: 4rem;
+        }
+        
+        @media (max-width: 480px) {
+            font-size: 3rem;
+        }
+    }
+    &__content {
+        font-size: var(--fs-400);
+    }
+
+    &__item {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        margin-bottom: 4rem;
+        color: var(--col-pbh-light);
+        a {
+            text-decoration: none;
+            color: var(--col-pbh-dark);
+            font-size: var(--fs-550);
+        }
+        .icon {
+            display: grid;
+            place-content: center;
+            width: 2.5rem;
+            height: 2.5rem;
+            font-size: 1.8rem;
+            line-height: 1;
+            border-radius: 0.75rem;
+            background-color: var(--col-pbh-dark);
+            color: var(--col-pbh-white) !important;
+        }
+    }
+}

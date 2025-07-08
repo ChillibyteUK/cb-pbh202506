@@ -16,11 +16,11 @@ defined( 'ABSPATH' ) || exit;
 		<div class="scroller-hero__content-wrapper">
 			<div class="scroller-hero__scroll-container">
 				<?php
-				$title = get_field( 'title' );
-				if ( $title ) {
-					// Repeat the title multiple times for full width coverage
+				$block_title = get_field( 'title' );
+				if ( $block_title ) {
+					// Repeat the title multiple times for full width coverage.
 					for ( $i = 0; $i < 10; $i++ ) {
-						echo '<h1 class="scroller-hero__title">' . esc_html( $title ) . '</h1>';
+						echo '<h1 class="scroller-hero__title">' . esc_html( $block_title ) . '</h1>';
 					}
 				}
 				?>
