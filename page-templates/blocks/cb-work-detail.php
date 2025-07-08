@@ -9,7 +9,7 @@ defined( 'ABSPATH' ) || exit;
 
 ?>
 <div class="container work-detail">
-	<div class="row">
+	<div class="row gx-5">
 		<div class="col-md-6 my-auto">
 			<?php
 			if ( wp_get_attachment_image( get_field( 'logo', get_the_ID() ), 'full' ) ) {
