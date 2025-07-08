@@ -22109,7 +22109,7 @@ header .dropdown.current-menu-item > .nav-link::before {
   font-size: 10rem;
   font-family: var(--ff-title);
   font-weight: bold;
-  color: white;
+  color: var(--col-pbh-white);
   margin: 0;
   white-space: nowrap;
 }

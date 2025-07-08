@@ -118,9 +118,6 @@ get_header();
 	<div class="text-center py-5 back">
 		<a href="/#work">Back</a>
 	</div>
-	<?php
-    get_template_part( './page-templates/blocks/cb-contact' );
-    ?>
 </main>
 <?php
 

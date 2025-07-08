@@ -10,10 +10,6 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-if ( session_status() === PHP_SESSION_NONE ) {
-    session_start();
-}
-
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>

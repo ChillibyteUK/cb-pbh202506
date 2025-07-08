@@ -9,8 +9,7 @@ defined( 'ABSPATH' ) || exit;
 
 $page_for_posts = get_option( 'page_for_posts' );
 
-set_query_var( 'header_class', 'header-blue' );
-set_query_var( 'contact_class', 'contact--alt' );
+set_query_var( 'header_class', 'header-green' );
 
 get_header();
 ?>
@@ -67,9 +66,6 @@ get_header();
 			</div>
 		</div>
 	</div>
-	<?php
-    get_template_part( './page-templates/blocks/cb-contact' );
-    ?>
 </main>
 <?php
 
