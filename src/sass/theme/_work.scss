@@ -1,0 +1,223 @@
+.single-work {
+  &__hero-section {
+    display: flex;
+    height: 600px;
+    gap: 1rem;
+    margin-bottom: 4rem;
+    
+    @media (max-width: 767px) {
+      flex-direction: column;
+      height: auto;
+    }
+  }
+  
+  &__content-left {
+    flex: 0 0 40%;
+    background-color: var(--col-pbh-dark, #000);
+    color: var(--col-pbh-white, #fff);
+    display: flex;
+    align-items: center;
+    padding: 5rem 0;
+    
+    @media (max-width: 767px) {
+      flex: none;
+      padding: 3rem 0;
+    }
+  }
+  
+  &__content-inner {
+    width: 100%;
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 15px;
+    
+    // Calculate the left column width based on Bootstrap's col-md-4 (33.33%)
+    // Within the 50% left section, we want the content to align with the main container
+    padding-left: calc((100vw - 1360px) / 2 + 15px);
+    
+    @media (max-width: 1200px) {
+      padding-left: 15px;
+    }
+    
+    @media (max-width: 767px) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    h1 {
+        font-size: 32px !important;
+    }
+  }
+  
+  &__content-right {
+    flex: 0 0 60%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    
+    @media (max-width: 767px) {
+      flex: none;
+    }
+  }
+  
+  &__hero-image {
+    width: 100%;
+    height: 100% !important;
+    object-fit: cover;
+    display: block;
+    
+    @media (max-width: 767px) {
+      height: 50vh;
+      min-height: 300px;
+    }
+  }
+  
+  &__logo {
+    max-width: 160px;
+    height: auto;
+    margin-bottom: 1rem;
+    
+    @media (max-width: 767px) {
+      max-width: 150px;
+      margin-bottom: 1.5rem;
+    }
+  }
+  
+  h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1.2;
+    
+    @media (max-width: 991px) {
+      font-size: 2.5rem;
+    }
+    
+    @media (max-width: 767px) {
+      font-size: 2rem;
+    }
+  }
+  
+  // Split Gallery Layout (matching designer mockup)
+  .split-gallery-layout {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 4rem 0 0 0;
+    
+    .gallery-row {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+      
+      &--top {
+        // Top row - shows ~3 slides (2.75 with partial)
+        animation: scroll-seamless 40s linear infinite;
+        animation-direction: normal;
+        
+        .gallery-item {
+          width: calc((100vw - 80px) / 3.5); // Show 3.5 slides
+          min-width: 300px;
+          max-width: 400px;
+          height: 225px;
+          
+          @media (max-width: 767px) {
+            width: calc((100vw - 60px) / 2.5);
+            min-width: 250px;
+            max-width: 280px;
+            height: 180px;
+          }
+        }
+      }
+      
+      &--bottom {
+        // Bottom row - shows ~2 slides (1.75 with partial)
+        animation: scroll-seamless 35s linear infinite;
+        animation-direction: reverse;
+        
+        .gallery-item {
+          width: calc((100vw - 60px) / 2.25); // Show 2.25 slides
+          min-width: 400px;
+          max-width: 500px;
+          height: 300px;
+          
+          @media (max-width: 767px) {
+            width: calc((100vw - 40px) / 1.75);
+            min-width: 320px;
+            max-width: 400px;
+            height: 240px;
+          }
+        }
+      }
+    }
+    
+    .gallery-item {
+      flex: 0 0 auto;
+      position: relative;
+      
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        position: relative;
+        
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: linear-gradient(135deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.3) 100%);
+          opacity: 0;
+          transition: opacity 0.3s ease;
+          z-index: 1;
+        }
+        
+        &:hover {
+          transform: translateY(-8px);
+          box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+          
+          &::before {
+            opacity: 1;
+          }
+        }
+      }
+      
+      .gallery-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.3s ease;
+        
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+  
+  // Animation for seamless horizontal scrolling
+  @keyframes scroll-seamless {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  // Pause animation on hover
+  .split-gallery-layout:hover .gallery-row {
+    animation-play-state: paused;
+  }
+  
+  // Remove old grid layout styles
+  .work-gallery-grid {
+    display: none;
+  }
+}

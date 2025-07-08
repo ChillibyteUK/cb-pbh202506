@@ -246,6 +246,15 @@ function cb_theme_enqueue() {
     $the_theme = wp_get_theme();
     wp_enqueue_style( 'aos-style', 'https://unpkg.com/aos@2.3.1/dist/aos.css', array() );
     wp_enqueue_script( 'aos', 'https://unpkg.com/aos@2.3.1/dist/aos.js', array(), null, true );
+
+    // Load Glide.js and GLightbox only on single work pages.
+    if ( is_singular( 'work' ) ) {
+        wp_enqueue_style( 'glide-core', 'https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css', array(), null );
+        wp_enqueue_script( 'glide', 'https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js', array(), null, true );
+        wp_enqueue_style( 'glightbox-css', 'https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css', array(), null );
+        wp_enqueue_script( 'glightbox-js', 'https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js', array(), null, true );
+    }
+
 	// phpcs:disable
     // wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.6.3.min.js', array(), null, true);
     // wp_enqueue_style( 'lightbox-stylesheet', 'https://cdn.jsdelivr.net/npm/lightbox2@2.11.5/dist/css/lightbox.min.css', array(), null );
@@ -255,13 +264,8 @@ function cb_theme_enqueue() {
     // wp_enqueue_script( 'splide-scripts', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js', array(), null, true );
     // wp_deregister_script( 'jquery' ); // Needed for FooGallery.
 	// phpcs:enable
-	wp_enqueue_style( 'glide-core', 'https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css', array(), null );
-	wp_enqueue_script( 'glide', 'https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js', array(), null, true );
-	wp_enqueue_style( 'glightbox-css', 'https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css', array(), null );
-    wp_enqueue_script( 'glightbox-js', 'https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js', array(), null, true );
 }
 add_action( 'wp_enqueue_scripts', 'cb_theme_enqueue' );
-
 
 /**
  * Filters the excerpt length.

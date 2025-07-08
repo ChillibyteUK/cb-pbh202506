@@ -1,8 +1,10 @@
 .service_intro_panel {
-  height: 100vh;
   min-height: 100vh;
+  display: flex;
+  align-items: center;
   background-color: var(--col-pbh-green);
   color: var(--col-pbh-dark);
+  padding-top: var(--h-top);
 
   h1 {
     font-size: 105px;
@@ -51,7 +53,7 @@
   }
 
   .h2 {
-    font-size: 32px;
+    font-size: 28px;
     font-family: var(--ff-heading);
     font-weight: var(--fw-700);
     transition: font-size var(--transition);
@@ -73,7 +75,7 @@
   &:hover {
     color: var(--col-pbh-dark);
     h2 {
-      font-size: 38px;
+      font-size: 32px;
     }
     .service_intro {
       opacity: 1;

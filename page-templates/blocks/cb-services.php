@@ -8,8 +8,8 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 <section class="service_intro_panel">
-	<div class="container h-100">
-		<div class="row h-100 gx-5">
+	<div class="container">
+		<div class="row gx-5">
 			<div class="col-md-6 d-flex flex-column justify-content-center">
 				<h1><?= esc_html( get_field( 'title' ) ); ?></h1>
 				<div class="service_intro"><?= wp_kses_post( get_field( 'services_intro' ) ); ?></div>
@@ -18,7 +18,7 @@ defined( 'ABSPATH' ) || exit;
 				<?php
 				while ( have_rows( 'services' ) ) {
 					the_row();
-					$slug = acf_slugify( get_sub_field( 'service_name' ) );
+					$slug = sanitize_title( get_sub_field( 'service_name' ) );
 					?>
 				<a href="#<?= esc_attr( $slug ); ?>" class="service_link">
 					<div class="service_icon"></div>
@@ -40,7 +40,7 @@ defined( 'ABSPATH' ) || exit;
 <?php
 while ( have_rows( 'services' ) ) {
 	the_row();
-	$slug = acf_slugify( get_sub_field( 'service_name' ) );
+	$slug = sanitize_title( get_sub_field( 'service_name' ) );
 	$bg   = wp_get_attachment_image_url( get_sub_field( 'service_background' ), 'full' );
 	?>
 <section class="service_panel" id="<?= esc_attr( $slug ); ?>" style="background-image:url(<?= esc_url( $bg ); ?>)" >
@@ -55,7 +55,7 @@ while ( have_rows( 'services' ) ) {
 			</div>
 			<div class="col-md-6 d-flex flex-column justify-content-center">
 				<?php
-				// iterate over nested ACF repeater
+				// iterate over nested ACF repeater.
 				while ( have_rows( 'features' ) ) {
 					the_row();
 					?>

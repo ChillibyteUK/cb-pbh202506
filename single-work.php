@@ -9,20 +9,28 @@ defined( 'ABSPATH' ) || exit;
 get_header();
 ?>
 <main id="main" class="single-work">
-	<div class="container pt-5">
-		<?= get_the_post_thumbnail( get_the_ID(), 'full', array( 'class' => 'single-work__hero mb-5' ) ); ?>
-		<?php
-		if ( wp_get_attachment_image( get_field( 'logo' ), 'full' ) ) {
-			echo wp_get_attachment_image( get_field( 'logo' ), 'full', false, array( 'class' => 'single-work__logo mb-5' ) );
-		}
-		?>
-        <h1><?= esc_html( get_the_title() ); ?></h1>
+	<div class="single-work__hero-section">
+		<div class="single-work__content-left">
+			<div class="single-work__content-inner">
+				<?php
+				if ( wp_get_attachment_image( get_field( 'logo' ), 'full' ) ) {
+					echo wp_get_attachment_image( get_field( 'logo' ), 'full', false, array( 'class' => 'single-work__logo' ) );
+				}
+				?>
+				<h1><?= esc_html( get_the_title() ); ?></h1>
+			</div>
+		</div>
+		<div class="single-work__content-right">
+			<?= get_the_post_thumbnail( get_the_ID(), 'full', array( 'class' => 'single-work__hero-image' ) ); ?>
+		</div>
+	</div>
+	<div class="container">
 		<article>
 			<?php
-	        echo wp_kses_post( apply_filters( 'the_content', get_the_content() ) );
-    	    ?>
+			echo wp_kses_post( apply_filters( 'the_content', get_the_content() ) );
+			?>
 		</article>
-    </div>
+	</div>
     <?php
 	$video = get_field( 'video' );
 	if ( ! empty( $video['poster'] ) && ! empty( $video['video_mp4'] ) ) {
@@ -59,39 +67,48 @@ get_header();
 	if ( ! empty( get_field( 'images' ) ) ) {
 		$gallery = get_field( 'images' );
 		if ( $gallery ) {
+			// Create enough images for seamless looping.
+			// Top row needs more images to fill 3+ visible slots and loop seamlessly.
+			$top_row = array();
+			for ( $i = 0; $i < 8; $i++ ) {
+				$top_row = array_merge( $top_row, $gallery );
+			}
+
+			// Bottom row needs fewer images for 2+ visible slots and loop seamlessly.
+			$bottom_row = array();
+			for ( $i = 0; $i < 6; $i++ ) {
+				$bottom_row = array_merge( $bottom_row, $gallery );
+			}
 			?>
-	<div id="lightbox-carousel" class="glide mt-5">
-		<div class="glide__track" data-glide-el="track">
-			<ul class="glide__slides">
-				<?php
-				foreach ( $gallery as $image ) {
-					?>
-				<li class="glide__slide">
-					<a 
-                        href="<?= esc_url( wp_get_attachment_image_url( $image, 'full' ) ); ?>" 
-                        class="glightbox"
-                        data-gallery="gallery1"
-                        data-title="<?= esc_attr( get_post_meta( $image, '_wp_attachment_image_alt', true ) ); ?>"
-                    >
-                        <?= wp_get_attachment_image( $image, 'large' ); ?>
-                    </a>
-				</li>
-					<?php
-				}
-				?>
-			</ul>
-		</div>
-		<div class="container">
-			<div class="glide__arrows" data-glide-el="controls">
-				<button class="glide__arrow glide__arrow--prev" data-glide-dir="<">
-					<svg width="60" height="30" viewBox="0 0 60 30"><path d="M-3.8147e-06 15L25 29.4338L25 0.56624L-3.8147e-06 15ZM60 12.5L22.5 12.5L22.5 17.5L60 17.5L60 12.5Z" fill="white"></path></svg>
-					<span class="sr-only">Previous</span>
-				</button>
-				<button class="glide__arrow glide__arrow--next" data-glide-dir=">">
-					<svg width="60" height="30" viewBox="0 0 60 30" class="rotate-180"><path d="M-3.8147e-06 15L25 29.4338L25 0.56624L-3.8147e-06 15ZM60 12.5L22.5 12.5L22.5 17.5L60 17.5L60 12.5Z" fill="white"></path></svg>
-					<span class="sr-only">Next</span>
-				</button>
+	<div class="split-gallery-layout">
+		<div class="gallery-row gallery-row--top">
+			<?php foreach ( $top_row as $index => $image ) { ?>
+			<div class="gallery-item">
+				<a 
+					href="<?= esc_url( wp_get_attachment_image_url( $image, 'full' ) ); ?>" 
+					class="glightbox"
+					data-gallery="gallery1"
+					data-title="<?= esc_attr( get_post_meta( $image, '_wp_attachment_image_alt', true ) ); ?>"
+				>
+					<?= wp_get_attachment_image( $image, 'large', false, array( 'class' => 'gallery-image' ) ); ?>
+				</a>
 			</div>
+			<?php } ?>
+		</div>
+		
+		<div class="gallery-row gallery-row--bottom">
+			<?php foreach ( $bottom_row as $index => $image ) { ?>
+			<div class="gallery-item">
+				<a 
+					href="<?= esc_url( wp_get_attachment_image_url( $image, 'full' ) ); ?>" 
+					class="glightbox"
+					data-gallery="gallery1"
+					data-title="<?= esc_attr( get_post_meta( $image, '_wp_attachment_image_alt', true ) ); ?>"
+				>
+					<?= wp_get_attachment_image( $image, 'large', false, array( 'class' => 'gallery-image' ) ); ?>
+				</a>
+			</div>
+			<?php } ?>
 		</div>
 	</div>
 			<?php
@@ -118,22 +135,14 @@ document.addEventListener('DOMContentLoaded', function () {
 		<?php
 		if ( $has_gallery ) {
 			?>
-	new Glide('#lightbox-carousel', {
-		type: 'carousel',
-		perView: 4.2,
-		focusAt: 'center',
-		gap: 16,
-		breakpoints: {
-			1024: { perView: 2.2 },
-			768: { perView: 1.2 },
-			480: { perView: 1 }
-		}
-	}).mount();
-
+	console.log('Initializing GLightbox...');
 	GLightbox({
 		selector: '.glightbox',
 		touchNavigation: true,
-		loop: true
+		loop: true,
+		closeButton: true,
+		zoomable: true,
+		draggable: true
 	});
 			<?php
 		}
