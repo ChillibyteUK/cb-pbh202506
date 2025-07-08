@@ -22386,8 +22386,8 @@ for (; i < all.length; i++) {
 }
 
 .single-work {
-  background-color: white;
-  color: black;
+  background-color: var(--col-pbh-white);
+  color: var(--col-pbh-black);
 }
 
 .page {
