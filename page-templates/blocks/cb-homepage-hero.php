@@ -9,7 +9,32 @@ defined( 'ABSPATH' ) || exit;
 ?>
 <div class="cb-homepage-hero">
 	<div class="cb-homepage-hero__image-wrapper">
-		<?= wp_get_attachment_image( get_field( 'background' ), 'full', false, array( 'class' => 'cb-homepage-hero__image' ) ); ?>
+		<?php
+		$video_url = get_field( 'video_url' );
+		if ( $video_url ) {
+			$poster = get_field( 'video_poster' );
+			?>
+			<section class="video_hero">
+				<div class="ratio ratio-16x9">
+					<picture>
+						<source srcset="<?= esc_attr( wp_get_attachment_image_srcset( $poster, 'full' ) ); ?>" type="image/jpeg">
+						<img 
+							src="<?= esc_url( wp_get_attachment_url( $poster ) ); ?>" 
+							alt="Poster image"
+						>
+					</picture>
+					<video class="absolute inset-0 h-full w-full" autoplay="" loop="" muted="" playsinline="" x-ref="video">
+						<source src="<?= esc_url( $video_url ); ?>" type="video/mp4">
+						Your browser does not support the video tag.
+					</video>
+				</div>
+			</section>
+			<?php
+		} else {
+			$bg_image = get_field( 'video_poster' );
+			echo wp_get_attachment_image( $bg_image, 'full', false, array( 'class' => 'cb-homepage-hero__image' ) );
+		}
+		?>
 		<div class="cb-homepage-hero__overlay">
 			<div class="zigzag"></div>
 		</div>
