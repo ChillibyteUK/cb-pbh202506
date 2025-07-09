@@ -1,0 +1,8 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="lightning-clip">
+        <polygon class="cls-1" points="2007.86 0 1693.63 703.27 1989.41 702.43 1890.92 1500 0 1500 0 0 2007.86 0"/>
+        <polygon class="cls-1" points="3000 0 3000 1500 2315.57 1500 2677.84 689.22 2382.06 690.06 2467.28 0 3000 0"/>
+    </clipPath>
+  </defs>
+</svg>
