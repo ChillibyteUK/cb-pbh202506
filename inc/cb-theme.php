@@ -262,8 +262,8 @@ function cb_theme_enqueue() {
     // wp_enqueue_script('parallax', get_stylesheet_directory_uri() . '/js/parallax.min.js', array('jquery'), null, true);
     // wp_enqueue_style( 'splide-stylesheet', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css', array(), null );
     // wp_enqueue_script( 'splide-scripts', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js', array(), null, true );
-    // wp_deregister_script( 'jquery' ); // Needed for FooGallery.
 	// phpcs:enable
+    wp_deregister_script( 'jquery' );
 }
 add_action( 'wp_enqueue_scripts', 'cb_theme_enqueue' );
 
