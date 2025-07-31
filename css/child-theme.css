@@ -21448,12 +21448,18 @@ html {
 
 body {
   font-family: var(--ff-body);
-  font-size: clamp(18px, 16.2857142857px + 0.5357142857vw, 24px);
+  font-size: clamp(16px, 15.4285714286px + 0.1785714286vw, 18px);
   font-weight: 500;
   line-height: 1.5;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.fs-xl {
+  font-size: var(--fs-xl, clamp(20px, 17.7142857143px + 0.7142857143vw, 28px));
+  font-weight: 500;
+  line-height: 1.6;
 }
 
 .fs-lg {
@@ -21810,6 +21816,7 @@ header .dropdown.current-menu-item > .nav-link::before {
   min-height: 200vh;
   z-index: 1;
   overflow: visible;
+  font-size: clamp(18px, 17.1428571429px + 0.2678571429vw, 21px);
 }
 .cb-homepage-hero__image-wrapper {
   position: sticky;

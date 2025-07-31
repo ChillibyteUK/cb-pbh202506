@@ -15,54 +15,9 @@ set_query_var( 'header_class', 'header-green' );
 get_header();
 ?>
 <main id="main" class="blog blog-index">
-	
-	<!-- Insights Hero Section -->
-	<section class="insights-hero">
-		<div class="insights-hero__image-section">
-		<?php
-			$hero_image = get_field( 'background', $page_for_posts );
-			if ( $hero_image ) {
-				echo wp_get_attachment_image( $hero_image, 'full', false, array( 'class' => 'insights-hero__image' ) );
-			}
-		?>
-    </div>
-    <div class="insights-hero__lightning-overlay">
-		<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/lightning-overlay.svg' ); ?>" alt="" class="lightning-overlay">
-    </div>
-    <div class="insights-hero__content-section">
-		<div class="container">
-			<div class="insights-hero__content">
-				<?php
-                $hero_title = get_field( 'title', $page_for_posts );
-				$hero_content = get_field( 'content', $page_for_posts );
-                
-                if ( $hero_title ) {
-                    echo '<h1 class="insights-hero__title">' . esc_html( $hero_title ) . '</h1>';
-                }
-				if ( $hero_content ) {
-            	    echo '<div class="insights-hero__text d-none d-md-block">' . wp_kses_post( $hero_content ) . '</div>';
-            	}
-                ?>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Mobile Hero Content (below hero on mobile) -->
-<section class="insights-hero-content">
-    <div class="container">
-        <div class="hero-content">
-            <?php
-
-            
-            if ( $hero_content ) {
-                echo '<div class="insights-hero__text">' . wp_kses_post( $hero_content ) . '</div>';
-            }
-            ?>
-        </div>
-    </div>
-</section>
-
+	<div class="container py-5">
+		<h1 class="fs-xl">Insights</h1>
+	</div>
     <div class="container py-5">
 		<div class="row g-5">
 		<?php
