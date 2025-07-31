@@ -11,6 +11,11 @@
 
         filter: invert(100%);
     }
+    
+    &__left {
+        position: sticky;
+        top: var(--h-top);
+    }
 
     &__right {
         strong {
