@@ -222,7 +222,7 @@ h1 {
   font-style: italic;
   font-weight: 800;
   font-size: 1.875rem;
-  line-height: 2.25rem;
+  line-height: 1;
   margin-bottom: 1em;
 
   @media (min-width: 768px) {
@@ -264,7 +264,6 @@ h1 {
     transform: scale(1.1);
   }
 }
-
 
 .pagination a {
   -webkit-text-stroke-color: #e6007e !important;

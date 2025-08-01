@@ -1,10 +1,10 @@
 {
-    "key": "group_cb_services",
-    "title": "CB Services",
+    "key": "group_cb_service_panel",
+    "title": "CB Service Panel",
     "fields": [
         {
-            "key": "field_cb_services_title",
-            "label": "CB Services",
+            "key": "field_cb_service_panel_title",
+            "label": "CB Service Panel",
             "name": "",
             "aria-label": "",
             "type": "message",
@@ -21,30 +21,9 @@
             "new_lines": "wpautop"
         },
         {
-            "key": "field_68556e7578d5e",
-            "label": "Title",
-            "name": "title",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "Our Services",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_68556e8278d5f",
-            "label": "Services Intro",
-            "name": "services_intro",
+            "key": "field_688cde210d70b",
+            "label": "Service Intro",
+            "name": "service_intro",
             "aria-label": "",
             "type": "wysiwyg",
             "instructions": "",
@@ -63,9 +42,9 @@
             "delay": 0
         },
         {
-            "key": "field_68556e9b78d60",
-            "label": "Services",
-            "name": "services",
+            "key": "field_688cde360d70c",
+            "label": "Features",
+            "name": "features",
             "aria-label": "",
             "type": "repeater",
             "instructions": "",
@@ -76,7 +55,7 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "block",
+            "layout": "table",
             "pagination": 0,
             "min": 0,
             "max": 0,
@@ -85,9 +64,9 @@
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_68556eaa78d61",
-                    "label": "Service Name",
-                    "name": "service_name",
+                    "key": "field_688cde400d70d",
+                    "label": "Title",
+                    "name": "title",
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
@@ -104,14 +83,14 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "parent_repeater": "field_68556e9b78d60"
+                    "parent_repeater": "field_688cde360d70c"
                 },
                 {
-                    "key": "field_68556eb678d62",
-                    "label": "Short Service Intro",
-                    "name": "short_service_intro",
+                    "key": "field_688cde470d70e",
+                    "label": "Description",
+                    "name": "description",
                     "aria-label": "",
-                    "type": "wysiwyg",
+                    "type": "textarea",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -121,30 +100,12 @@
                         "id": ""
                     },
                     "default_value": "",
+                    "maxlength": "",
                     "allow_in_bindings": 0,
-                    "tabs": "all",
-                    "toolbar": "full",
-                    "media_upload": 1,
-                    "delay": 0,
-                    "parent_repeater": "field_68556e9b78d60"
-                },
-                {
-                    "key": "field_688ce0814865a",
-                    "label": "Service Page",
-                    "name": "service_page",
-                    "aria-label": "",
-                    "type": "link",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "url",
-                    "allow_in_bindings": 0,
-                    "parent_repeater": "field_68556e9b78d60"
+                    "rows": "",
+                    "placeholder": "",
+                    "new_lines": "",
+                    "parent_repeater": "field_688cde360d70c"
                 }
             ]
         }
@@ -154,7 +115,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/cb-services"
+                "value": "acf\/cb-service-panel"
             }
         ]
     ],
@@ -167,5 +128,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1754063123
+    "modified": 1754062426
 }
