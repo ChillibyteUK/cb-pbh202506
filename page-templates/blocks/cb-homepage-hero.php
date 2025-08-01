@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
 		if ( $images && is_array( $images ) && count( $images ) > 0 ) {
 			?>
 			<section class="image_hero">
-				<div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+				<div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
 					<div class="carousel-inner">
 						<?php foreach ( $images as $index => $image ) : ?>
 							<div class="carousel-item <?= 0 === $index ? 'active' : ''; ?>">
