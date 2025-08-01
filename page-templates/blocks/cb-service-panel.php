@@ -10,7 +10,7 @@ $bg = get_the_post_thumbnail_url( get_the_ID(), 'full' );
 ?>
 <section class="service_panel" style="background-image:url(<?= esc_url( $bg ); ?>)" >
 	<div class="overlay"></div>
-	<div class="container h-100">
+	<div class="container h-100 p-htop">
 		<div class="row h-100 gx-5">
 			<div class="col-md-6 d-flex flex-column justify-content-center">
 				<h2 data-aos="fade-right"><?= esc_html( get_the_title() ); ?></h2>

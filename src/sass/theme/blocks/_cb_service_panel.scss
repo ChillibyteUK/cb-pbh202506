@@ -1,12 +1,25 @@
 .service_panel {
   min-height: 100vh;
-  height: 100vh;
   background-size: cover;
   position: relative;
   isolation: isolate;
-  overflow: hidden;
   color: var(--col-pbh-white);
   font-size: 18px;
+  
+  .container {
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    align-items: center;
+    padding-top: var(--h-top);
+    padding-bottom: 2rem;
+  }
+  
+  .row {
+    min-height: 100vh;
+    height: auto;
+    width: 100%;
+  }
   .overlay {
     position: absolute;
     inset: 0;

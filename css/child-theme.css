@@ -22210,13 +22210,24 @@ header .dropdown.current-menu-item > .nav-link::before {
 
 .service_panel {
   min-height: 100vh;
-  height: 100vh;
   background-size: cover;
   position: relative;
   isolation: isolate;
-  overflow: hidden;
   color: var(--col-pbh-white);
   font-size: 18px;
+}
+.service_panel .container, .service_panel .wp-block-group {
+  min-height: 100vh;
+  height: auto;
+  display: flex;
+  align-items: center;
+  padding-top: var(--h-top);
+  padding-bottom: 2rem;
+}
+.service_panel .row {
+  min-height: 100vh;
+  height: auto;
+  width: 100%;
 }
 .service_panel .overlay {
   position: absolute;
@@ -22958,6 +22969,10 @@ h1, .h1 {
 }
 .pagination a:hover {
   transform: scale(1.1);
+}
+
+.p-htop {
+  padding-top: var(--h-top);
 }
 
 .has-blue-color,
