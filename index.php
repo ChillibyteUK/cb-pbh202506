@@ -14,9 +14,9 @@ set_query_var( 'header_class', 'header-green' );
 
 get_header();
 ?>
-<main id="main" class="blog blog-index">
-	<div class="container py-5">
-		<h1 class="fs-xl">Insights</h1>
+<main id="main" class="blog blog-index pt-5">
+	<div class="container mt-5 py-5">
+		<h1>Insights</h1>
 	</div>
     <div class="container py-5">
 		<div class="row g-5">

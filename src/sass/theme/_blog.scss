@@ -40,6 +40,15 @@
 
 .blog-index {
     background-color: var(--col-pbh-dark);
+    h1 {
+        font-size: 105px;
+        font-family: var(--ff-title);
+        font-weight: var(--fw-800);
+        color: var(--col-pbh-white);
+        text-transform: uppercase;
+        letter-spacing: -.025em;
+        margin-bottom: 1rem;
+    }
 }
 .blog-card {
     display: grid;
