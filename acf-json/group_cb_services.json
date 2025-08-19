@@ -21,6 +21,27 @@
             "new_lines": "wpautop"
         },
         {
+            "key": "field_68a4789805a2a",
+            "label": "Service Intro",
+            "name": "service_intro",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Used by Service Index",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
             "key": "field_68556e7578d5e",
             "label": "Title",
             "name": "title",
