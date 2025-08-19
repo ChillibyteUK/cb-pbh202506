@@ -3,6 +3,27 @@
     "title": "Service Page",
     "fields": [
         {
+            "key": "field_68a4a13da607a",
+            "label": "Service Intro",
+            "name": "service_intro",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_68a48c3147328",
             "label": "Challenges",
             "name": "challenges",
@@ -95,5 +116,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1755614382
+    "modified": 1755619663
 }
