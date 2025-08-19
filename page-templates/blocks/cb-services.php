@@ -12,7 +12,7 @@ defined( 'ABSPATH' ) || exit;
 		<div class="row gx-5">
 			<div class="col-lg-6 my-auto">
 				<h1><?= esc_html( get_field( 'title' ) ); ?></h1>
-				<div class="service_intro"><?= wp_kses_post( get_field( 'services_intro' ) ); ?></div>
+				<div class="service_intro"><?= wp_kses_post( get_field( 'service_intro' ) ); ?></div>
 			</div>
 			<div class="col-lg-6">
 				<div class="accordion" id="services-list">
