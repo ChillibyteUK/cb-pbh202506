@@ -49,7 +49,7 @@ get_header();
 					<?php
 					$case_studies = get_field( 'related_case_studies' );
 					if ( $case_studies && is_array( $case_studies ) && count( $case_studies ) > 0 ) {
-						// Output the first (big) case study
+						// Output the first (big) case study.
 						$first = array_shift( $case_studies );
 						?>
 						<a href="<?= esc_url( get_permalink( $first ) ); ?>" class="big-case-study" data-aos="fade">
@@ -59,7 +59,7 @@ get_header();
 							</div>
 						</a>
 						<?php
-						// Output the rest in a flex container
+						// Output the rest in a flex container.
 						if ( count( $case_studies ) > 0 ) {
 							echo '<div class="case-study-buttons d-flex flex-wrap gap-2 mt-2">';
 							foreach ( $case_studies as $r ) {

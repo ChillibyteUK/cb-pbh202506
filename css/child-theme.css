@@ -22595,8 +22595,9 @@ header .dropdown.current-menu-item > .nav-link::before {
 }
 
 .service .service-back {
-  display: block;
-  padding-top: 6rem;
+  display: inline-block;
+  margin-top: 6rem;
+  padding-bottom: 1em;
   font-size: var(--fs-800);
   font-family: var(--ff-title);
   text-transform: uppercase;
