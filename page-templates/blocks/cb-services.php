@@ -7,7 +7,7 @@
 
 defined( 'ABSPATH' ) || exit;
 ?>
-<section class="service_intro_panel">
+<section class="services">
 	<div class="container">
 		<div class="row gx-5">
 			<div class="col-lg-6 my-auto">
@@ -15,25 +15,37 @@ defined( 'ABSPATH' ) || exit;
 				<div class="service_intro"><?= wp_kses_post( get_field( 'services_intro' ) ); ?></div>
 			</div>
 			<div class="col-lg-6">
-				<div class="services-accordion">
+				<div class="accordion" id="services-list">
 					<?php
-					while ( have_rows( 'services' ) ) {
-						the_row();
-						$page_link = get_sub_field( 'service_page' );
+					// get pages with parent 'services'.
+					$services = get_pages(
+						array(
+							'child_of'    => get_page_by_path( 'services' )->ID,
+							'post_type'   => 'page',
+							'post_status' => 'publish',
+							'numberposts' => -1,
+						)
+					);
+					// iterate through them and output the page_title and get_field('service_intro') content for each.
+					foreach ( $services as $service ) {
+						$service_title       = get_the_title( $service->ID );
+						$service_description = get_sub_field( 'service_description' );
+						$collapse_id         = 'service-' . esc_attr( sanitize_title( $service_title ) );
 						?>
-					<div class="service-item">
-						<a href="<?= esc_url( $page_link ); ?>" class="service_link">
-							<div class="service_background"></div>
-							<div class="service_header">
-								<div class="service_icon"></div>
-								<div class="h2"><?= esc_html( get_sub_field( 'service_name' ) ); ?></div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="heading-<?= esc_attr( $collapse_id ); ?>">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#<?= esc_attr( $collapse_id ); ?>" aria-expanded="false" aria-controls="<?= esc_attr( $collapse_id ); ?>">
+								<?= esc_html( $service_title ); ?>
+							</button>
+						</h2>
+						<div id="<?= esc_attr( $collapse_id ); ?>" class="accordion-collapse collapse" aria-labelledby="heading-<?= esc_attr( $collapse_id ); ?>" data-bs-parent="#services-list">
+							<div class="accordion-body">
+								<a href="<?= esc_url( get_permalink( $service->ID ) ); ?>" class="service_link">
+									<?= wp_kses_post( get_field( 'service_intro', $service->ID ) ); ?>
+									<div class="text-end accordion--more">Find out more</div>
+								</a>
 							</div>
-							<div class="service_content">
-								<div class="service_intro">
-									<?= wp_kses_post( get_sub_field( 'short_service_intro' ) ); ?>
-								</div>
-							</div>
-						</a>
+						</div>
 					</div>
 						<?php
 					}
