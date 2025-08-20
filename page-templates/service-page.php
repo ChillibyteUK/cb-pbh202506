@@ -63,9 +63,24 @@ get_header();
 						if ( count( $case_studies ) > 0 ) {
 							echo '<div class="case-study-buttons d-flex flex-wrap gap-2 mt-2">';
 							foreach ( $case_studies as $r ) {
+								$cs_company    = get_field( 'company', $r );
+								$cs_short_name = get_field( 'short_name', $r );
+
+								if ( $cs_company || $cs_short_name ) {
+									$cs_title = '';
+									if ( $cs_company ) {
+										$cs_title .= '<strong>' . esc_html( $cs_company ) . '</strong>';
+									}
+									if ( $cs_short_name ) {
+										$cs_title .= ( $cs_company ? ': ' : '' ) . esc_html( $cs_short_name );
+									}
+									$display_title = $cs_title;
+								} else {
+									$display_title = esc_html( get_the_title( $r ) );
+								}
 								?>
 								<a href="<?= esc_url( get_permalink( $r ) ); ?>" class="case-study-button" data-aos="fade">
-									<?= esc_html( get_the_title( $r ) ); ?>
+									<?= wp_kses_post( $display_title ); ?>
 								</a>
 								<?php
 							}

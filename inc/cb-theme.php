@@ -97,6 +97,11 @@ function widgets_init() {
 }
 add_action( 'widgets_init', 'widgets_init', 11 );
 
+/**
+ * Sets up theme defaults and registers support for various WordPress features.
+ *
+ * Adds support for disabling custom colors and defines a custom editor color palette.
+ */
 function cb_theme_setup() {
     add_theme_support( 'disable-custom-colors' );
     add_theme_support(
@@ -348,3 +353,18 @@ function cb_load_more_work() {
 
 	wp_send_json( $response );
 }
+
+
+add_filter(
+	'acf/fields/relationship/result/key=field_68a48c4ef51d2',
+	function ( $title, $post, $field, $post_id ) {
+    	$company    = get_field( 'company', $post->ID );
+    	$short_name = get_field( 'short_name', $post->ID );
+    	if ( $company || $short_name ) {
+        	$title = esc_html( $company . ( $company && $short_name ? ': ' : '' ) . $short_name );
+    	}
+    	return $title;
+	},
+	10,
+	4
+);
