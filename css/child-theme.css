@@ -21757,6 +21757,7 @@ header .dropdown.current-menu-item > .nav-link::before {
   font-size: 105px;
   font-family: var(--ff-title);
   font-weight: var(--fw-800);
+  font-style: oblique;
   color: var(--col-pbh-dark);
   text-transform: uppercase;
   letter-spacing: -0.025em;
