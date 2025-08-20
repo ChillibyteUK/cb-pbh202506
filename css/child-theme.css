@@ -21422,7 +21422,6 @@ readers do not read off random characters that represent icons */
   src: url("../fonts/Futura-PT-Cond-Extra-Bold-Oblique.woff2") format("woff2");
   font-weight: 800;
   font-style: oblique;
-  font-stretch: condensed;
   font-display: swap;
 }
 @font-face {
@@ -21513,7 +21512,6 @@ body {
   font-weight: 800;
   font-size: 2.25rem;
   line-height: 2.5;
-  font-stretch: condensed;
 }
 @media (min-width: 768px) {
   .text-headline-lg {
@@ -21533,7 +21531,6 @@ body {
   font-weight: 800;
   font-size: 3rem;
   line-height: 0.925;
-  font-stretch: condensed;
 }
 @media (min-width: 768px) {
   .text-headline-xl {
