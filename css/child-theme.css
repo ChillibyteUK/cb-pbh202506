@@ -22119,7 +22119,8 @@ header .dropdown.current-menu-item > .nav-link::before {
 .cb-contact__title {
   font-family: var(--ff-title);
   font-size: 6rem;
-  font-weight: bold;
+  font-weight: var(--fw-800);
+  font-style: oblique;
   text-transform: uppercase;
 }
 @media (max-width: 1200px) {
