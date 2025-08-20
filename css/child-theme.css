@@ -21911,6 +21911,7 @@ header .dropdown.current-menu-item > .nav-link::before {
 .services h1, .services .h1 {
   font-size: 105px;
   font-family: var(--ff-title);
+  font-style: oblique;
   font-weight: var(--fw-800);
   color: var(--col-pbh-dark);
   text-transform: uppercase;
@@ -21991,6 +21992,7 @@ header .dropdown.current-menu-item > .nav-link::before {
 .cb-contact-cta h2, .cb-contact-cta .h2 {
   font-family: var(--ff-title);
   font-weight: var(--fw-800);
+  font-style: oblique;
   font-size: 105px;
   text-transform: uppercase;
   line-height: 0.8;
@@ -22083,6 +22085,7 @@ header .dropdown.current-menu-item > .nav-link::before {
   flex: 0 0 auto;
   font-size: 10rem;
   font-family: var(--ff-title);
+  font-style: oblique;
   font-weight: bold;
   color: var(--col-pbh-white);
   margin: 0;
@@ -22419,6 +22422,7 @@ header .dropdown.current-menu-item > .nav-link::before {
   font-size: 105px;
   font-family: var(--ff-title);
   font-weight: var(--fw-800);
+  font-style: oblique;
   color: var(--col-pbh-white);
   text-transform: uppercase;
   letter-spacing: -0.025em;
@@ -22436,6 +22440,8 @@ header .dropdown.current-menu-item > .nav-link::before {
 .blog-card__date {
   font-size: 2rem;
   font-family: var(--ff-title);
+  font-style: oblique;
+  font-weight: var(--fw-800);
   color: var(--col-pbh-violet);
   margin-bottom: 0.5rem;
 }
@@ -22527,7 +22533,8 @@ header .dropdown.current-menu-item > .nav-link::before {
   font-family: var(--ff-title);
   text-transform: uppercase;
   font-size: 8rem;
-  font-weight: bold;
+  font-weight: var(--fw-800);
+  font-style: oblique;
   margin-bottom: 1.5rem;
   line-height: 1.1;
   color: var(--col-pbh-dark);
@@ -22600,6 +22607,7 @@ header .dropdown.current-menu-item > .nav-link::before {
   padding-bottom: 1em;
   font-size: var(--fs-800);
   font-family: var(--ff-title);
+  font-style: oblique;
   text-transform: uppercase;
   text-decoration: none;
   color: var(--col-pbh-white);
@@ -22630,6 +22638,7 @@ header .dropdown.current-menu-item > .nav-link::before {
   font-size: 105px;
   font-family: var(--ff-title);
   font-weight: var(--fw-800);
+  font-style: oblique;
   color: var(--col-pbh-white);
   text-transform: uppercase;
   letter-spacing: -0.025em;

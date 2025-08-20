@@ -44,6 +44,7 @@
         font-size: 105px;
         font-family: var(--ff-title);
         font-weight: var(--fw-800);
+        font-style: oblique;
         color: var(--col-pbh-white);
         text-transform: uppercase;
         letter-spacing: -.025em;
@@ -59,6 +60,8 @@
     &__date {
         font-size: 2rem;
         font-family: var(--ff-title);
+        font-style: oblique;
+        font-weight: var(--fw-800);
         color: var(--col-pbh-violet);
         margin-bottom: 0.5rem;
     }
@@ -156,7 +159,8 @@
         font-family: var(--ff-title);
         text-transform: uppercase;
         font-size: 8rem;
-        font-weight: bold;
+        font-weight: var(--fw-800);
+        font-style: oblique;
         margin-bottom: 1.5rem;
         line-height: 1.1;
         color: var(--col-pbh-dark);
