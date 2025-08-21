@@ -22768,6 +22768,9 @@ header .dropdown.current-menu-item > .nav-link::before {
   color: var(--col-pbh-dark);
 }
 
+@view-transition {
+  navigation: auto;
+}
 body {
   background-color: var(--col-pbh-black);
   color: var(--col-pbh-white);

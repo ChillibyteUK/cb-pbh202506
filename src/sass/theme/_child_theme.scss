@@ -8,6 +8,10 @@
 @import "blog";
 @import "service";
 
+@view-transition {
+  navigation: auto;
+}
+
 body {
   background-color: var(--col-pbh-black);
   color: var(--col-pbh-white);
