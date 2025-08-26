@@ -9,12 +9,12 @@ defined( 'ABSPATH' ) || exit;
 ?>
 <section class="services">
 	<div class="container">
-		<div class="row gx-5">
-			<div class="col-lg-6 my-auto">
+		<div class="row g-5">
+			<div class="col-lg-5 my-auto">
 				<h1><?= esc_html( get_field( 'title' ) ); ?></h1>
 				<div class="service_intro"><?= wp_kses_post( get_field( 'service_intro' ) ); ?></div>
 			</div>
-			<div class="col-lg-6">
+			<div class="col-lg-6 offset-lg-1">
 				<div class="accordion" id="services-list">
 					<?php
 					// get pages with parent 'services'.
@@ -42,7 +42,6 @@ defined( 'ABSPATH' ) || exit;
 							<div class="accordion-body">
 								<a href="<?= esc_url( get_permalink( $service->ID ) ); ?>" class="service_link">
 									<?= wp_kses_post( get_field( 'service_intro', $service->ID ) ); ?>
-									<div class="text-end accordion--more">Find out more</div>
 								</a>
 							</div>
 						</div>
