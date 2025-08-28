@@ -21985,6 +21985,7 @@ header .dropdown.current-menu-item > .nav-link::before {
 }
 .services .accordion .accordion-body {
   padding-block-start: 0;
+  padding-inline-start: 0;
 }
 
 @keyframes bounce-left-right {
