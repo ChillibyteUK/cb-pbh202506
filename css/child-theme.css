@@ -21981,28 +21981,33 @@ header .dropdown.current-menu-item > .nav-link::before {
   font-weight: var(--fw-700);
 }
 .services .accordion .accordion-button[aria-expanded=true]::after {
-  animation: bounce-left-right 0.7s cubic-bezier(0.7, 0, 0.3, 1) infinite;
+  display: none;
 }
 .services .accordion .accordion-body {
   padding-block-start: 0;
-  padding-inline-start: 0;
+  padding-inline: 0;
+}
+.services .accordion .accordion-body a {
+  display: grid;
+  grid-template-columns: auto 40px;
+}
+.services .accordion .accordion-body a .indicator i {
+  font-size: 1rem;
+  animation: bounce-left-right 0.7s cubic-bezier(0.7, 0, 0.3, 1) infinite;
 }
 
 @keyframes bounce-left-right {
   0% {
-    transform: translateX(0) var(--bs-accordion-btn-icon-transform);
-  }
-  20% {
-    transform: translateX(-8px) var(--bs-accordion-btn-icon-transform);
+    transform: translateX(0);
   }
   40% {
-    transform: translateX(0) var(--bs-accordion-btn-icon-transform);
+    transform: translateX(14px);
   }
   60% {
-    transform: translateX(6px) var(--bs-accordion-btn-icon-transform);
+    transform: translateX(14px);
   }
   100% {
-    transform: translateX(0) var(--bs-accordion-btn-icon-transform);
+    transform: translateX(0);
   }
 }
 .cb-contact-cta {
