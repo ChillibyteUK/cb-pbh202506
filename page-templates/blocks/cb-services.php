@@ -42,7 +42,7 @@ defined( 'ABSPATH' ) || exit;
 							<div class="accordion-body">
 								<a href="<?= esc_url( get_permalink( $service->ID ) ); ?>" class="service_link">
 									<?= wp_kses_post( get_field( 'service_intro', $service->ID ) ); ?>
-									<div class="indicator"><i class="fa-solid fa-angle-right"></i></div>
+									<div class="indicator"><span></span></div>
 								</a>
 							</div>
 						</div>
