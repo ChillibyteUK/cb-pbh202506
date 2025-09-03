@@ -20,7 +20,7 @@ defined( 'ABSPATH' ) || exit;
 					// get pages with parent 'services'.
 					$services = get_pages(
 						array(
-							'child_of'    => get_page_by_path( 'services' )->ID,
+							'child_of'    => get_page_by_path( 'skills' )->ID,
 							'post_type'   => 'page',
 							'post_status' => 'publish',
 							'numberposts' => -1,

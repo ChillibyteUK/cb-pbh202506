@@ -21588,6 +21588,10 @@ strong,
   font-family: var(--ff-title);
 }
 
+.fs-normal {
+  font-style: normal;
+}
+
 /* Colour Classes */
 .has-white-background-color,
 .bg--white {
@@ -22404,6 +22408,31 @@ header .dropdown.current-menu-item > .nav-link::before {
 }
 .single-work .work-gallery-grid {
   display: none;
+}
+
+.work-nav {
+  row-gap: 1rem;
+}
+.work-nav a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  width: min(400px, 40vw);
+  min-width: 350px;
+  gap: 1rem;
+  font-weight: var(--fw-700);
+  color: var(--col-pbh-dark);
+  transition: color var(--transition);
+}
+.work-nav a:hover {
+  color: var(--col-pbh-violet);
+}
+.work-nav__left {
+  text-align: start;
+}
+.work-nav__right {
+  text-align: end;
+  margin-left: auto;
 }
 
 /* single blog post styles */

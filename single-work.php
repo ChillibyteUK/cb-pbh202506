@@ -14,10 +14,10 @@ get_header();
 			<div class="single-work__content-inner">
 				<?php
 				if ( wp_get_attachment_image( get_field( 'logo' ), 'full' ) ) {
-					echo wp_get_attachment_image( get_field( 'logo' ), 'full', false, array( 'class' => 'single-work__logo' ) );
+					echo wp_get_attachment_image( get_field( 'logo' ), 'full', false, array( 'class' => 'single-work__logo mb-5' ) );
 				}
 				?>
-				<h1><?= esc_html( get_the_title() ); ?></h1>
+				<h1 class="fs-normal"><?= esc_html( get_the_title() ); ?></h1>
 			</div>
 		</div>
 		<div class="single-work__content-right">
@@ -115,8 +115,36 @@ get_header();
 		}
 	}
 	?>
-	<div class="text-center py-5 back">
-		<a href="/#work">Back</a>
+	<div class="container py-5">
+		<?php
+		$prev_post = get_adjacent_post( false, '', true );
+		$next_post = get_adjacent_post( false, '', false );
+
+		if ( $prev_post || $next_post ) {
+			?>
+		<nav class="work-nav d-flex flex-wrap justify-content-between my-4">
+			<?php
+			if ( $prev_post ) {
+				?>
+			<a href="<?= esc_url( get_permalink( $prev_post->ID ) ); ?>" class="work-nav__left">
+				<span>&larr;</span>
+				<span><?= esc_html( get_the_title( $prev_post->ID ) ); ?></span>
+			</a>
+				<?php
+			}
+			if ( $next_post ) {
+				?>
+			<a href="<?= esc_url( get_permalink( $next_post->ID ) ); ?>" class="work-nav__right">
+				<span><?= esc_html( get_the_title( $next_post->ID ) ); ?></span>
+				<span>&rarr;</span>
+			</a>
+				<?php
+			}
+			?>
+		</nav>
+			<?php
+		}
+		?>
 	</div>
 </main>
 <?php

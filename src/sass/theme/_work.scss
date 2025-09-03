@@ -221,3 +221,28 @@
     display: none;
   }
 }
+
+.work-nav {
+  row-gap: 1rem;
+  a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    width: min( 400px, 40vw);
+    min-width: 350px;
+    gap: 1rem;
+    font-weight: var(--fw-700);
+    color: var(--col-pbh-dark);
+    transition: color var(--transition);
+    &:hover {
+      color: var(--col-pbh-violet);
+    }
+  }
+  &__left {
+    text-align: start;
+  }
+  &__right {
+    text-align: end;
+    margin-left: auto;
+  }
+}
