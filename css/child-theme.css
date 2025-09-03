@@ -21592,6 +21592,10 @@ strong,
   font-style: normal;
 }
 
+.fs-600 {
+  font-size: var(--fs-600);
+}
+
 /* Colour Classes */
 .has-white-background-color,
 .bg--white {
@@ -21601,6 +21605,11 @@ strong,
 .has-white-color,
 .text-white {
   color: var(--col-white) !important;
+}
+
+.has-light-background-color,
+.bg--light {
+  background-color: var(--col-pbh-white) !important;
 }
 
 .has-dark-background-color,
@@ -22433,6 +22442,7 @@ header .dropdown.current-menu-item > .nav-link::before {
 .work-nav__right {
   text-align: end;
   margin-left: auto;
+  justify-content: flex-end;
 }
 
 /* single blog post styles */

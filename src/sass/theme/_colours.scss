@@ -8,6 +8,11 @@
   color: var(--col-white) !important;
 }
 
+.has-light-background-color,
+.bg--light {
+  background-color: var(--col-pbh-white) !important;
+}
+
 .has-dark-background-color,
 .bg--dark {
   background-color: var(--col-pbh-dark) !important;

@@ -92,6 +92,39 @@ get_header();
 			</div>
 		</div>
 	</section>
+
+	<section class="py-5 has-light-background-color">
+		<?php
+		$prev_post = get_adjacent_post( false, '', true );
+		$next_post = get_adjacent_post( false, '', false );
+
+		if ( $prev_post || $next_post ) {
+			?>
+		<nav class="container work-nav d-flex flex-wrap justify-content-between my-4">
+			<?php
+			if ( $prev_post ) {
+				?>
+			<a href="<?= esc_url( get_permalink( $prev_post->ID ) ); ?>" class="work-nav__left fs-600">
+				<span>&larr;</span>
+				<span><?= esc_html( get_the_title( $prev_post->ID ) ); ?></span>
+			</a>
+				<?php
+			}
+			if ( $next_post ) {
+				?>
+			<a href="<?= esc_url( get_permalink( $next_post->ID ) ); ?>" class="work-nav__right fs-600">
+				<span><?= esc_html( get_the_title( $next_post->ID ) ); ?></span>
+				<span>&rarr;</span>
+			</a>
+				<?php
+			}
+			?>
+		</nav>
+			<?php
+		}
+		?>
+	</section>
+
 	<?php
 	$cta_link = get_field( 'cta_link', 'option' );
 	?>
