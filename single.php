@@ -22,7 +22,7 @@ set_query_var( 'contact_class', 'contact--alt' );
 		</div>
 	</section>
 	<section class="blog__content">
-		<div class="container pb-5">
+		<div class="container pb-5 cols-lg-2" style="column-gap:3rem;">
 			<?= wp_kses_post( get_the_content() ); ?>
 		</div>
 	</section>
@@ -33,9 +33,38 @@ set_query_var( 'contact_class', 'contact--alt' );
 			}
 
 			?>
-	<div class="text-center py-5 back">
-		<a href="/insights/">Back</a>
+	<div class="container py-5">
+		<?php
+		$prev_post = get_adjacent_post( false, '', true );
+		$next_post = get_adjacent_post( false, '', false );
+
+		if ( $prev_post || $next_post ) {
+			?>
+		<nav class="work-nav d-flex flex-wrap justify-content-between my-4">
+			<?php
+			if ( $prev_post ) {
+				?>
+			<a href="<?= esc_url( get_permalink( $prev_post->ID ) ); ?>" class="work-nav__left">
+				<span>&larr;</span>
+				<span><?= esc_html( get_the_title( $prev_post->ID ) ); ?></span>
+			</a>
+				<?php
+			}
+			if ( $next_post ) {
+				?>
+			<a href="<?= esc_url( get_permalink( $next_post->ID ) ); ?>" class="work-nav__right">
+				<span><?= esc_html( get_the_title( $next_post->ID ) ); ?></span>
+				<span>&rarr;</span>
+			</a>
+				<?php
+			}
+			?>
+		</nav>
+			<?php
+		}
+		?>
 	</div>
+
 </main>
 <?php
 get_footer();
