@@ -151,7 +151,7 @@ get_header();
 				<span>
 					<?php
 					if ( get_field( 'company', $prev_post->ID ) ) {
-						echo '<div class="fs-600 mb-3"><em><strong>' . esc_html( get_field( 'company', $prev_post->ID ) ) . '</strong></em></div>';
+						echo '<div class="fs-600 mb-3"><em><strong>' . esc_html( get_field( 'company', $prev_post->ID ) ) . ':</strong></em></div>';
 					}
 					?>
 					<?= esc_html( get_the_title( $prev_post->ID ) ); ?>
@@ -165,7 +165,7 @@ get_header();
 				<span>
 					<?php
 					if ( get_field( 'company', $next_post->ID ) ) {
-						echo '<div class="fs-600 mb-3"><em><strong>' . esc_html( get_field( 'company', $next_post->ID ) ) . '</strong></em></div>';
+						echo '<div class="fs-600 mb-3"><em><strong>' . esc_html( get_field( 'company', $next_post->ID ) ) . ':</strong></em></div>';
 					}
 					?>
 					<?= esc_html( get_the_title( $next_post->ID ) ); ?></span>
