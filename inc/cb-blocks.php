@@ -70,23 +70,6 @@ function acf_blocks() {
 
         acf_register_block_type(
             array(
-                'name'            => 'cb_work_detail',
-                'title'           => __( 'CB Work Detail' ),
-                'category'        => 'layout',
-                'icon'            => 'cover-image',
-                'render_template' => 'page-templates/blocks/cb-work-detail.php',
-                'mode'            => 'edit',
-                'supports'        => array(
-                    'mode'      => false,
-                    'anchor'    => true,
-                    'className' => true,
-                    'align'     => true,
-                ),
-            )
-        );
-
-        acf_register_block_type(
-            array(
                 'name'            => 'cb_contact_cta',
                 'title'           => __( 'CB Contact CTA' ),
                 'category'        => 'layout',

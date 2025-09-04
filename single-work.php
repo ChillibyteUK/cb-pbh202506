@@ -25,11 +25,15 @@ get_header();
 		</div>
 	</div>
 	<div class="container">
-		<article>
-			<?php
-			echo wp_kses_post( apply_filters( 'the_content', get_the_content() ) );
-			?>
-		</article>
+		<div class="row">
+			<div class="col-md-8 offset-md-2">
+				<article>
+					<?php
+					echo wp_kses_post( apply_filters( 'the_content', get_the_content() ) );
+					?>
+				</article>
+			</div>
+		</div>
 	</div>
     <?php
 	$video = get_field( 'video' );

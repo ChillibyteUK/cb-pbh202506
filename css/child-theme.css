@@ -22046,29 +22046,6 @@ header .dropdown.current-menu-item > .nav-link::before {
   margin-bottom: 2rem;
 }
 
-.work-detail__logo {
-  max-width: 160px;
-  height: auto;
-  margin-bottom: 2rem;
-  filter: invert(100%);
-}
-@media (max-width: 767px) {
-  .work-detail__logo {
-    max-width: 150px;
-    margin-bottom: 1.5rem;
-  }
-}
-.work-detail__left {
-  position: sticky;
-  top: var(--h-top);
-}
-.work-detail__right strong {
-  display: inline-block;
-  padding: 0.75rem 1rem;
-  background-color: black;
-  color: white;
-}
-
 .scroller-hero {
   position: relative;
   height: 600px;
@@ -22443,6 +22420,15 @@ header .dropdown.current-menu-item > .nav-link::before {
   text-align: end;
   margin-left: auto;
   justify-content: flex-end;
+}
+
+strong > em,
+em > strong {
+  font-style: normal;
+  display: inline-block;
+  padding: 0.75rem 1rem;
+  background-color: black;
+  color: white;
 }
 
 /* single blog post styles */
