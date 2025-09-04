@@ -145,6 +145,8 @@ get_header();
 		<nav class="work-nav d-flex flex-wrap justify-content-between my-4">
 			<?php
 			if ( $prev_post ) {
+				echo $prev_post->ID;
+				echo get_field( 'company', $prev_post->ID );
 				?>
 			<a href="<?= esc_url( get_permalink( $prev_post->ID ) ); ?>" class="work-nav__left">
 				<span>&larr;</span>
@@ -160,6 +162,8 @@ get_header();
 				<?php
 			}
 			if ( $next_post ) {
+				echo $next_post->ID;
+				echo get_field( 'company', $next_post->ID );
 				?>
 			<a href="<?= esc_url( get_permalink( $next_post->ID ) ); ?>" class="work-nav__right">
 				<span>
