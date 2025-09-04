@@ -162,7 +162,13 @@ get_header();
 			if ( $next_post ) {
 				?>
 			<a href="<?= esc_url( get_permalink( $next_post->ID ) ); ?>" class="work-nav__right">
-				<span><?= esc_html( get_the_title( $next_post->ID ) ); ?></span>
+				<span>
+					<?php
+					if ( get_field( 'company', $prev_post->ID ) ) {
+						echo '<div class="fs-600 mb-3"><em><strong>' . esc_html( get_field( 'company', $prev_post->ID ) ) . '</strong></em></div>';
+					}
+					?>
+					<?= esc_html( get_the_title( $next_post->ID ) ); ?></span>
 				<span>&rarr;</span>
 			</a>
 				<?php
