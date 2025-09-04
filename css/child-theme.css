@@ -21596,6 +21596,24 @@ strong,
   font-size: var(--fs-600);
 }
 
+.wp-block-quote {
+  font-size: 1.5rem;
+  line-height: 1.25rem;
+  font-stretch: condensed;
+}
+@media (min-width: 768px) {
+  .wp-block-quote {
+    font-size: 2.25rem;
+    line-height: 2.5;
+  }
+}
+@media (min-width: 1024px) {
+  .wp-block-quote {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+
 /* Colour Classes */
 .has-white-background-color,
 .bg--white {

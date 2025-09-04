@@ -24,18 +24,34 @@ get_header();
 			<?= get_the_post_thumbnail( get_the_ID(), 'full', array( 'class' => 'single-work__hero-image' ) ); ?>
 		</div>
 	</div>
+	<?php
+	$content = apply_filters( 'the_content', get_the_content() );
+
+	// Match all blockquotes
+	preg_match_all( '/<blockquote.*?>.*?<\\/blockquote>/is', $content, $blockquotes );
+
+	// Remove blockquotes from content
+	$content_without_blockquotes = preg_replace( '/<blockquote.*?>.*?<\\/blockquote>/is', '', $content );
+
+	// Output non-blockquote content inside the container
+	?>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8 offset-md-2">
 				<article>
-					<?php
-					echo wp_kses_post( apply_filters( 'the_content', get_the_content() ) );
-					?>
+					<?= wp_kses_post( $content_without_blockquotes ); ?>
 				</article>
 			</div>
 		</div>
 	</div>
-    <?php
+	<?php
+	// Output blockquotes outside the container.
+	if ( ! empty( $blockquotes[0] ) ) {
+		foreach ( $blockquotes[0] as $bq ) {
+			echo '<div class="standalone-blockquote py-5 has-violet-background-color"><div class="container py-5 text-center w-50 mx-auto">' . wp_kses_post( $bq ) . '</div></div>';
+		}
+	}
+
 	$video = get_field( 'video' );
 	if ( ! empty( $video['poster'] ) && ! empty( $video['video_mp4'] ) ) {
 		$video  = get_field( 'video' );
