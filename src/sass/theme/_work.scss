@@ -2,7 +2,6 @@
   &__hero-section {
     display: flex;
     height: 600px;
-    gap: 1rem;
     margin-bottom: 4rem;
     
     @media (max-width: 767px) {
@@ -12,7 +11,7 @@
   }
   
   &__content-left {
-    flex: 0 0 40%;
+    flex: 0 0 45%;
     background-color: var(--col-pbh-dark, #000);
     color: var(--col-pbh-white, #fff);
     display: flex;
@@ -30,6 +29,7 @@
     max-width: 1360px;
     margin: 0 auto;
     padding: 0 15px;
+    padding-right: 5rem;
     
     // Calculate the left column width based on Bootstrap's col-md-4 (33.33%)
     // Within the 50% left section, we want the content to align with the main container
@@ -37,6 +37,7 @@
     
     @media (max-width: 1200px) {
       padding-left: 15px;
+      padding-right: 5rem;
     }
     
     @media (max-width: 767px) {
@@ -46,11 +47,12 @@
 
     h1 {
         font-size: 32px !important;
+        text-wrap: balance;
     }
   }
   
   &__content-right {
-    flex: 0 0 60%;
+    flex: 0 0 55%;
     display: flex;
     align-items: center;
     overflow: hidden;
