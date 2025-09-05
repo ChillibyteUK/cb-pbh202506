@@ -258,3 +258,11 @@ em > strong {
     background-color: black;
     color: white;
 }
+
+.fs-600 {
+  strong > em,
+  em > strong {
+    line-height: 1;
+    padding: 0.5rem 0.0.5rem 0.25rem 0.5rem;
+  }
+}

@@ -22461,6 +22461,12 @@ em > strong {
   color: white;
 }
 
+.fs-600 strong > em,
+.fs-600 em > strong {
+  line-height: 1;
+  padding: 0.5rem 0 0.5rem 0.25rem 0.5rem;
+}
+
 /* single blog post styles */
 .blog-single {
   background-color: var(--col-pbh-green);
