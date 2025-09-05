@@ -58,10 +58,13 @@
         height: 100%;
       }
       .work-item__logo {
-        height: 50px;
+        max-height: 50px;
+        max-width: 150px;
+        height: auto;
         width: auto;
         transition: transform var(--transition);
         transform-origin: top left;
+        padding: 0.5rem 0rem 0rem 0.5rem;
       }
       &:hover {
         .work-item__overlay {

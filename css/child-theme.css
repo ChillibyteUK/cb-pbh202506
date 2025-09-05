@@ -21853,10 +21853,13 @@ header .dropdown.current-menu-item > .nav-link::before {
   height: 100%;
 }
 .cb-work-list .work-item__link .work-item__logo {
-  height: 50px;
+  max-height: 50px;
+  max-width: 150px;
+  height: auto;
   width: auto;
   transition: transform var(--transition);
   transform-origin: top left;
+  padding: 0.5rem 0rem 0rem 0.5rem;
 }
 .cb-work-list .work-item__link:hover .work-item__overlay {
   opacity: 1;
