@@ -186,3 +186,12 @@ strong,
     line-height: 1;
   }
 }
+
+
+.balance {
+  display: inline-block;
+  text-wrap: balance;
+  @supports (text-wrap: pretty) {
+    text-wrap: pretty;
+  }
+}
