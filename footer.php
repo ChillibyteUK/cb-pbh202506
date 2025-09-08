@@ -14,7 +14,8 @@ defined( 'ABSPATH' ) || exit;
 <footer class="footer">
     <div class="container py-3">
         <div class="d-flex flex-wrap gap-3 justify-content-between">
-			<div>Copyright &copy; <?= esc_html( gmdate( 'Y' ) ); ?> <a href="https://www.humannetworkgroup.com/" target="_blank">Human Network Ltd.</a><br>All rights reserved.</div>
+			<div>Copyright &copy; <?= esc_html( gmdate( 'Y' ) ); ?> <a href="https://www.humannetworkgroup.com/" target="_blank">Human Network Ltd.</a><br>
+			<a href="/privacy-policy/">Privacy Policy</a> | <a href="/modern-slavery-statement/">Modern Slavery Statement</a></div>
 			<div class="footer-social d-flex gap-2	">
 				<a class="d-flex align-items-center justify-items-center" href="https://www.instagram.com/pbhagency/" rel="noopener noreferrer" target="_blank">
 					<i class="fa-brands fa-instagram"></i>
