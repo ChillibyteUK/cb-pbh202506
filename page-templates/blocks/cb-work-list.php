@@ -11,7 +11,7 @@ $q = new WP_Query(
 	array(
 		'post_type'      => 'work',
 		'posts_per_page' => 9,
-		'orderby'        => 'date',
+		'orderby'        => 'menu_order',
 		'order'          => 'ASC',
 	)
 );
